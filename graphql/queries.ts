@@ -286,6 +286,7 @@ export const GET_PRODUCT = gql`
     product(id: $id, idType: SLUG) {
       name
       slug
+      databaseId
       ... on SimpleProduct {
         id
         name

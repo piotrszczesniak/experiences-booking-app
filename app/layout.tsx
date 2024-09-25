@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Roboto_Slab } from 'next/font/google';
-import './globals.css';
+import './globals.scss';
 
 import Footer from './components/Footer';
 import MainMenu from './components/MainMenu';

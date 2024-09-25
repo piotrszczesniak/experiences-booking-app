@@ -1,9 +1,10 @@
-import { GetHeaderMenuQuery, Menu, MenuItem } from '@/generated/graphql';
+import { GetHeaderMenuQuery } from '@/generated/graphql';
 import { GET_MENU_BY_NAME } from '@/graphql/queries';
 import { getClient } from '@/lib/apollo-client';
 import Image from 'next/image';
 import Link from 'next/link';
-import Cart from './Basket';
+import styles from './MainMenu.module.scss';
+import BasketMini from './BasketMini';
 
 const MainMenu = async () => {
   const client = getClient();
@@ -22,26 +23,27 @@ const MainMenu = async () => {
   const queryData: GetHeaderMenuQuery = data;
   const menu = queryData.acfSiteSettings?.acfHeaderMenu?.menuItems;
 
-  console.log(menu);
+  console.log('menu', queryData);
 
   return (
-    <nav>
-      <Link className='logo' style={{ display: 'inline-flex' }} href={'/'}>
+    <nav className={styles.nav}>
+      <Link className={styles['logo-link']} href={'/'}>
         <Image
-          loading='eager'
+          className={styles['logo-img']}
           height={72}
           width={200}
           alt='logo'
           src={queryData.acfSiteSettings?.acfHeaderMenu?.logo?.node.mediaItemUrl || ''}
+          priority
         />
       </Link>
-      <ul className='menu'>
+      <ul className={styles.menu}>
         {menu?.map((item, index) => {
           if (item?.hasChildItems) {
             return (
-              <li key={index}>
-                <Link href={item?.link || ''}> {item.label} </Link>
-                <ul className='child-menu'>
+              <li className={styles['menu-item']} key={index}>
+                <Link href={item?.link || ''}>{item.label}</Link>
+                <ul className={styles['child-menu']}>
                   {item.childMenuItems?.map((childItem, childIndex) => {
                     return (
                       <li key={childIndex}>
@@ -63,9 +65,15 @@ const MainMenu = async () => {
           }
         })}
       </ul>
-      <div className='searchbar'>Search</div>
-      <div className='tripadvisor'>TripAdvisor</div>
-      <Cart />
+      <div className={styles['quick-menu']}>
+        <div className={styles['quick-item']}>Search</div>
+        <div className={styles['quick-item']}>TripAdvisor</div>
+        <div className={styles['quick-item']}>
+          <Link href={'/basket'}>
+            <BasketMini />
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 };
