@@ -1,6 +1,7 @@
 import { Post } from '@/generated/graphql';
 import { GET_ALL_POSTS } from '@/graphql/queries';
 import { getClient } from '@/lib/apollo-client';
+import Link from 'next/link';
 
 export default async function Home() {
   const client = getClient();
@@ -21,9 +22,7 @@ export default async function Home() {
   return (
     <main>
       <h1>Home Page</h1>
-      {/* {posts?.map((item, index) => {
-        return <h3 key={index}>{item.title}</h3>;
-      })} */}
+      <Link href='/basket'>Basket</Link>
     </main>
   );
 }

@@ -1,5 +1,5 @@
-import Counter from '@/app/components/Counter';
-import { GetProductQuery, Product, SimpleProduct, VariableProduct } from '@/generated/graphql';
+import AddToBasket from '@/app/components/AddToBasket';
+import { GetProductQuery } from '@/generated/graphql';
 import { GET_PRODUCT } from '@/graphql/queries';
 import { getClient } from '@/lib/apollo-client';
 
@@ -28,6 +28,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <main>
         <h1>{name}</h1>
         <p>price from {regularPrice}</p>
+        <AddToBasket product={product} />
       </main>
     );
   }
@@ -35,12 +36,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
   if (product?.__typename === 'VariableProduct') {
     const { name, regularPrice } = product;
 
-    console.log(product);
-
     return (
       <main>
         <h1>{name}</h1>
         <p>prices from {regularPrice}</p>
+        <AddToBasket product={product} />
       </main>
     );
   }

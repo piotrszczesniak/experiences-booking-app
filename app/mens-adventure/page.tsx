@@ -22,8 +22,6 @@ const MensHome = async () => {
   const krakow: ProductCategory = data.krakow;
   const warsaw: ProductCategory = data.warsaw;
 
-  console.log(krakow);
-
   return (
     <main>
       <h1>Mens adventure</h1>

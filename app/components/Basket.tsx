@@ -3,8 +3,19 @@
 import useBasketStore from '@/lib/basket-store';
 
 const Basket = () => {
-  const { count } = useBasketStore();
+  const { basketProducts } = useBasketStore();
 
-  return <div>Basket: {count} </div>;
+  return (
+    <ul>
+      {basketProducts.map((product) => {
+        return (
+          <li key={product.databaseId}>
+            {product.name}, quantity: {product.quantity}
+          </li>
+        );
+      })}
+    </ul>
+  );
 };
+
 export default Basket;

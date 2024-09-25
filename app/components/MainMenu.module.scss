@@ -1,0 +1,61 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  .logo-link {
+    .logo-img {
+      width: 148px;
+      height: 53px;
+      object-fit: contain;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    gap: 1rem;
+    width: 100%;
+
+    .menu-item {
+      position: relative;
+
+      &:hover {
+        .child-menu {
+          display: block;
+        }
+      }
+
+      .child-menu {
+        position: absolute;
+        top: 100%;
+        left: 0.5rem;
+        list-style: none;
+        padding: 0.5rem;
+        border: 1px solid grey;
+        border-radius: 0.5rem;
+        background-color: white;
+        width: 100%;
+        min-width: 150px;
+        display: none;
+      }
+    }
+  }
+
+  .quick-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+
+    .quick-item {
+      flex-shrink: 0;
+    }
+  }
+}
