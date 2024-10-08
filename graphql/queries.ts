@@ -52,18 +52,7 @@ export const GET_ALL_POSTS = gql`
             }
           }
         }
-      }
-    }
-  }
-`;
-
-export const GET_ALL_POSTS_SLUGS = gql`
-  query getPostsSlugs {
-    posts {
-      edges {
-        node {
-          slug
-        }
+        date
       }
     }
   }
@@ -79,6 +68,11 @@ export const GET_POST = gql`
         node {
           firstName
           lastName
+        }
+      }
+      categories {
+        nodes {
+          name
         }
       }
     }

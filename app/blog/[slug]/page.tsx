@@ -19,9 +19,10 @@ const SingleBlog = async ({ params }: { params: { slug: string } }) => {
 
   const queryData: GetPostQuery = data;
   const post = queryData.post;
-
+  // console.log(post?.categories.nodes[0]);
   return (
     <main>
+      {/* <h3>{post?.categories[0].name}</h3> */}
       <h1>{post?.title}</h1>
       <article dangerouslySetInnerHTML={{ __html: post?.content || '' }} />
     </main>

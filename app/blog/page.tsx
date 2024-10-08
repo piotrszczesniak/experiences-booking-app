@@ -17,7 +17,8 @@ const BlogHome = async () => {
       },
     },
   });
-
+  console.log(data.posts.nodes);
+  console.log('su');
   const posts: Post[] = data?.posts?.nodes;
 
   return (
