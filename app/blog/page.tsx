@@ -17,20 +17,25 @@ const BlogHome = async () => {
       },
     },
   });
-  console.log(data.posts.nodes);
-  console.log('su');
   const posts: Post[] = data?.posts?.nodes;
 
   return (
-    <ol>
-      {posts?.map((item, index) => {
-        return (
-          <li key={index}>
-            <Link href={`/blog/${item.slug}` || ''}>{item.title}</Link>
-          </li>
-        );
-      })}
-    </ol>
+    <>
+      <ol>
+        {posts?.map((item, index) => {
+          return (
+            <li key={index}>
+              <Link href={`/blog/${item.slug}` || ''}>{item.title}</Link>
+            </li>
+          );
+        })}
+      </ol>
+      <div className="pagination">
+        <button>prev</button>
+        ...
+        <button>next</button>
+      </div>
+    </>
   );
 };
 export default BlogHome;
