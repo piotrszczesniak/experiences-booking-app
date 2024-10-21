@@ -20,7 +20,6 @@ const SingleBlog = async ({ params }: { params: { slug: string } }) => {
   const queryData: GetPostQuery = data;
   const post = queryData.post;
   console.log(post?.categories?.nodes.map((category) => category.name));
-  // console.log('sss');
 
   return (
     <main>
