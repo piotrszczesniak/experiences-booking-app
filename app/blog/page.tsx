@@ -42,30 +42,22 @@
 
 // poprzednie dzialajace ponizej
 
+// app/blog/page.tsx
 import { GET_ALL_POSTS } from '@/graphql/queries';
 import { getClient } from '@/lib/apollo-client';
 import { Post } from '@/generated/graphql';
 import Link from 'next/link';
 import PaginationControls from '../components/PaginationControls';
 import './blog.module.scss';
-// const dynamic = 'force-dynamic';
 
-const BlogHome = async ({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) => {
-  const page =
-    typeof searchParams.page === 'string' ? parseInt(searchParams.page) : 1;
-  const first = 3; // Number of posts per page
-  const after =
-    typeof searchParams.after === 'string' ? searchParams.after : null;
+const BlogHome = async () => {
+  const first = 8; // Number of posts to fetch
 
   const client = getClient();
 
   const { data } = await client.query({
     query: GET_ALL_POSTS,
-    variables: { first, after },
+    variables: { first },
     context: {
       fetchOptions: {
         next: {
@@ -81,19 +73,18 @@ const BlogHome = async ({
   return (
     <>
       <ol>
-        {posts?.map((item, index) => {
-          return (
-            <li key={item.id || index}>
-              <Link href={`/blog/${item.slug}` || ''}>{item.title}</Link>
-            </li>
-          );
-        })}
+        {posts?.map((item, index) => (
+          <li key={item.id || index}>
+            <Link href={`/blog/${item.slug}` || ''}>{item.title}</Link>
+          </li>
+        ))}
       </ol>
       <div className="pagination">
         <PaginationControls
           hasNextPage={pageInfo?.hasNextPage}
           endCursor={pageInfo?.endCursor}
-          currentPage={page}
+          currentPage={1} // Set current page to 1, since this is the main page
+          total={pageInfo?.total}
         />
       </div>
     </>
