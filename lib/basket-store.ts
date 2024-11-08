@@ -9,10 +9,10 @@ type BasketStore = {
   count: number;
   products: Product[];
   basketProducts: BasketProduct[];
-  increase: () => void;
-  decrease: () => void;
+  increase: (productId: number) => void;
+  decrease: (productId: number) => void;
   addToBasket: (product: Product) => void;
-  removeFromBasket: (productId: string) => void;
+  removeFromBasket: (productId: number) => void;
 };
 
 const useBasketStore = create<BasketStore>((set) => ({
@@ -20,9 +20,44 @@ const useBasketStore = create<BasketStore>((set) => ({
   products: [],
   basketProducts: [],
 
-  increase: () => set((state) => ({ ...state, count: state.count + 1 })),
+  decrease: (productId) =>
+    set((state) => {
+      return {
+        ...state,
+        count: state.count - 1,
+      };
+    }),
 
-  decrease: () => set((state) => ({ ...state, count: state.count - 1 })),
+  increase: (productId) =>
+    set((state) => {
+      const productIndex = state.products?.findIndex((product) => product?.databaseId === productId);
+
+      let updatedProducts: Product[] = [];
+
+      if (productIndex !== -1) {
+        const productToAdd = state.products[productIndex];
+        updatedProducts = [...state.products, productToAdd];
+      }
+
+      let updatedBasketProducts;
+
+      if (productIndex !== -1) {
+        updatedBasketProducts = state?.basketProducts.map((item) => {
+          if (item.databaseId === productId) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+
+      return {
+        ...state,
+        count: state.count + 1,
+        products: updatedProducts,
+        basketProducts: updatedBasketProducts,
+      };
+    }),
 
   addToBasket: (product: Product) =>
     set((state) => {
@@ -51,7 +86,7 @@ const useBasketStore = create<BasketStore>((set) => ({
       };
     }),
 
-  removeFromBasket: (productId: string) =>
+  removeFromBasket: (productId) =>
     set((state) => ({
       products: state.products.filter((product: any) => product?.id !== productId),
       count: state.count - 1,

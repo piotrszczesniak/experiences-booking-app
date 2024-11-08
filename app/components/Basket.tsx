@@ -3,14 +3,18 @@
 import useBasketStore from '@/lib/basket-store';
 
 const Basket = () => {
-  const { basketProducts } = useBasketStore();
+  const { basketProducts, products, increase, decrease } = useBasketStore();
+
+  console.log(basketProducts);
+  console.log(products);
 
   return (
     <ul>
       {basketProducts.map((product) => {
         return (
           <li key={product.databaseId}>
-            {product.name}, quantity: {product.quantity}
+            {product.name} | <button onClick={() => decrease(product.databaseId)}>-</button> {product.quantity}
+            <button onClick={() => increase(product.databaseId)}>+</button>
           </li>
         );
       })}
