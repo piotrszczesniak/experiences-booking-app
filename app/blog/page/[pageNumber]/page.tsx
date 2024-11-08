@@ -12,6 +12,7 @@ const BlogPageNumber = async ({
   const pageNumber = parseInt(params.pageNumber) || 1; // Current page number
   const first = 8; // Number of posts to fetch
   const client = getClient();
+  console.log(`current pagenumber is ${pageNumber}`);
 
   // Initialize the `after` cursor
   let after: string | undefined;
@@ -55,6 +56,7 @@ const BlogPageNumber = async ({
 
   const posts: Post[] = data?.posts?.nodes; // Retrieved posts
   const pageInfo = data?.posts?.pageInfo; // Pagination info
+  console.log(`endCursor is${pageInfo.endCursor}`);
 
   // Handle the case where no posts are returned
   if (!posts || posts.length === 0) {
