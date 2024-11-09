@@ -22,9 +22,27 @@ const useBasketStore = create<BasketStore>((set) => ({
 
   decrease: (productId) =>
     set((state) => {
+      const productIndex = state.products.findIndex((item) => item?.databaseId === productId);
+
+      const updatedProducts = productIndex !== -1 ? state.products.filter((_, index) => index !== productIndex) : state.products;
+
+      const updatedBasketProducts = state.basketProducts
+        .map((item) => {
+          if (item.databaseId === productId) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        })
+        .filter((item) => item.quantity > 0);
+
+      const newCount = Math.max(state.count - 1, 0);
+
       return {
         ...state,
-        count: state.count - 1,
+        products: updatedProducts,
+        basketProducts: updatedBasketProducts,
+        count: newCount,
       };
     }),
 
@@ -89,7 +107,7 @@ const useBasketStore = create<BasketStore>((set) => ({
   removeFromBasket: (productId) =>
     set((state) => ({
       products: state.products.filter((product: any) => product?.id !== productId),
-      count: state.count - 1,
+      count: Math.max(state.count - 1, 0),
     })),
 }));
 
