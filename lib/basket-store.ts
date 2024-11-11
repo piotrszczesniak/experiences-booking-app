@@ -57,7 +57,7 @@ const useBasketStore = create<BasketStore>((set) => ({
         updatedProducts = [...state.products, productToAdd];
       }
 
-      let updatedBasketProducts;
+      let updatedBasketProducts: BasketProduct[] = [];
 
       if (productIndex !== -1) {
         updatedBasketProducts = state?.basketProducts.map((item) => {
@@ -105,10 +105,33 @@ const useBasketStore = create<BasketStore>((set) => ({
     }),
 
   removeFromBasket: (productId) =>
-    set((state) => ({
-      products: state.products.filter((product: any) => product?.id !== productId),
-      count: Math.max(state.count - 1, 0),
-    })),
+    set((state) => {
+      const productIndex = state?.products.findIndex((item) => item?.databaseId === productId);
+
+      const updatedProducts = productIndex !== -1 ? state.products.filter((item) => item?.databaseId !== productId) : state.products;
+
+      const productFound = state.basketProducts.find((item) => item.databaseId === productId);
+      const productQuantity = productFound ? productFound.quantity : 0;
+
+      const newCount = state.count - productQuantity;
+
+      const updatedBasketProducts = state.basketProducts
+        .map((item) => {
+          if (item.databaseId === productId) {
+            return { ...item, quantity: 0 };
+          } else {
+            return item;
+          }
+        })
+        .filter((item) => item?.quantity > 0);
+
+      return {
+        ...state,
+        count: newCount,
+        products: updatedProducts,
+        basketProducts: updatedBasketProducts,
+      };
+    }),
 }));
 
 export default useBasketStore;

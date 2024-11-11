@@ -3,7 +3,10 @@
 import useBasketStore from '@/lib/basket-store';
 
 const Basket = () => {
-  const { basketProducts, increase, decrease, count, removeFromBasket } = useBasketStore();
+  const { basketProducts, products, increase, decrease, count, removeFromBasket } = useBasketStore();
+
+  console.log('basketProducts', basketProducts);
+  console.log('products', products);
 
   if (count === 0) {
     return <p>Your basket is empty.</p>;
