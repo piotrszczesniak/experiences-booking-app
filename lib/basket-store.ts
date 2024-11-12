@@ -1,9 +1,10 @@
 import { create } from 'zustand';
 
 import { GetProductQuery } from '@/generated/graphql';
+import { ChangeEvent } from 'react';
 
 type Product = GetProductQuery['product'];
-type BasketProduct = Product & { quantity: number };
+type BasketProduct = Product & { quantity: number } & { eventDate: Date };
 
 type BasketStore = {
   count: number;
@@ -13,12 +14,31 @@ type BasketStore = {
   decrease: (productId: number) => void;
   addToBasket: (product: Product) => void;
   removeFromBasket: (productId: number) => void;
+  dateFrom: Date;
+  dateTo: Date;
+  setDateFrom: (e: ChangeEvent<HTMLInputElement>) => void;
+  setDateTo: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 const useBasketStore = create<BasketStore>((set) => ({
   count: 0,
   products: [],
   basketProducts: [],
+
+  dateFrom: new Date(),
+  dateTo: new Date(),
+
+  setDateFrom: (e) =>
+    set((state) => {
+      console.log(e);
+
+      return { ...state, dateFrom: new Date(e.target.value) };
+    }),
+
+  setDateTo: (e) =>
+    set((state) => {
+      return { ...state, dateTo: new Date(e.target.value) };
+    }),
 
   decrease: (productId) =>
     set((state) => {
