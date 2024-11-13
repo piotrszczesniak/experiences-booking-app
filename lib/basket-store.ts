@@ -4,7 +4,17 @@ import { GetProductQuery } from '@/generated/graphql';
 import { ChangeEvent } from 'react';
 
 type Product = GetProductQuery['product'];
-type BasketProduct = Product & { quantity: number } & { eventDate: Date };
+type BasketProduct = Product & { quantity: number } & {
+  eventDate: Date;
+  eventTime: 'morning' | 'afternoon' | 'evening';
+};
+
+/** // todo
+ *  [] add eventDate
+ *  [] add eventTime
+ *  [] add notes
+ *
+ */
 
 type BasketStore = {
   count: number;
@@ -18,12 +28,17 @@ type BasketStore = {
   dateTo: Date;
   setDateFrom: (e: ChangeEvent<HTMLInputElement>) => void;
   setDateTo: (e: ChangeEvent<HTMLInputElement>) => void;
+  notes: string | '';
+  setNotes: (notes: string | '') => void;
 };
 
 const useBasketStore = create<BasketStore>((set) => ({
   count: 0,
   products: [],
   basketProducts: [],
+  notes: 'Hi team, can you pick us up from the airport?',
+
+  setNotes: (notes) => set((state) => ({ ...state, notes })),
 
   dateFrom: new Date(),
   dateTo: new Date(),

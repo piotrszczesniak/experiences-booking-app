@@ -3,7 +3,8 @@
 import useBasketStore from '@/lib/basket-store';
 
 const Basket = () => {
-  const { basketProducts, increase, decrease, count, removeFromBasket, setDateFrom, setDateTo, dateFrom, dateTo } = useBasketStore();
+  const { basketProducts, increase, decrease, count, removeFromBasket, setDateFrom, setDateTo, dateFrom, dateTo, setNotes, notes } =
+    useBasketStore();
 
   console.log('dateFrom', dateFrom);
   console.log('dateTo', dateTo);
@@ -55,6 +56,8 @@ const Basket = () => {
         <input onChange={(e) => setDateFrom(e)} value={dateFrom ? formatDate(dateFrom) : ''} type='date' name='date-arrive' id='' />
         <h3>When do you leave Kraków?</h3>
         <input onChange={(e) => setDateTo(e)} value={dateTo ? formatDate(dateTo) : ''} type='date' name='date-leave' id='' />
+        <h3>Do you need anything extra?</h3>
+        <textarea onChange={(e) => setNotes(e.target.value)} value={notes} name='notes' id='' cols={30} rows={10} />
       </>
     );
 };
