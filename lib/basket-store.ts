@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
 
 import { GetProductQuery } from '@/generated/graphql';
 import { ChangeEvent } from 'react';
@@ -10,10 +11,7 @@ type BasketProduct = Product & { quantity: number } & {
 };
 
 /** // todo
- *  [] add eventDate
- *  [] add eventTime
- *  [] add notes
- *
+ * !! there is issue: when i pick da game date/time of one product, and after that i add another product the game date/time reset!
  */
 
 type BasketStore = {
@@ -30,6 +28,8 @@ type BasketStore = {
   setDateTo: (e: ChangeEvent<HTMLInputElement>) => void;
   notes: string | '';
   setNotes: (notes: string | '') => void;
+  setEventDate: (e: ChangeEvent<HTMLInputElement>, productId: number) => void;
+  setEventTime: (e: ChangeEvent<HTMLSelectElement>, productId: number) => void;
 };
 
 const useBasketStore = create<BasketStore>((set) => ({
@@ -38,6 +38,42 @@ const useBasketStore = create<BasketStore>((set) => ({
   basketProducts: [],
   notes: 'Hi team, can you pick us up from the airport?',
 
+  setEventTime: (e, productId) =>
+    set((state) => {
+      const eventTime = e.target.value as 'morning' | 'afternoon' | 'evening';
+
+      const updatedBasketProducts = state.basketProducts.map((item) => {
+        if (item.databaseId === productId) {
+          return { ...item, eventTime };
+        } else {
+          return item;
+        }
+      });
+
+      return {
+        ...state,
+        basketProducts: updatedBasketProducts,
+      };
+    }),
+
+  setEventDate: (e, productId) =>
+    set((state) => {
+      const eventDate = new Date(e.target.value);
+
+      const updatedBasketProducts = state.basketProducts.map((item) => {
+        if (item.databaseId === productId) {
+          return { ...item, eventDate };
+        } else {
+          return item;
+        }
+      });
+
+      return {
+        ...state,
+        basketProducts: updatedBasketProducts,
+      };
+    }),
+
   setNotes: (notes) => set((state) => ({ ...state, notes })),
 
   dateFrom: new Date(),
@@ -45,8 +81,6 @@ const useBasketStore = create<BasketStore>((set) => ({
 
   setDateFrom: (e) =>
     set((state) => {
-      console.log(e);
-
       return { ...state, dateFrom: new Date(e.target.value) };
     }),
 

@@ -3,11 +3,21 @@
 import useBasketStore from '@/lib/basket-store';
 
 const Basket = () => {
-  const { basketProducts, increase, decrease, count, removeFromBasket, setDateFrom, setDateTo, dateFrom, dateTo, setNotes, notes } =
-    useBasketStore();
-
-  console.log('dateFrom', dateFrom);
-  console.log('dateTo', dateTo);
+  const {
+    basketProducts,
+    increase,
+    decrease,
+    count,
+    removeFromBasket,
+    setDateFrom,
+    setDateTo,
+    dateFrom,
+    dateTo,
+    setNotes,
+    notes,
+    setEventDate,
+    setEventTime,
+  } = useBasketStore();
 
   // Utility to format a Date object to a 'YYYY-MM-DD' string
   const formatDate = (date: Date) => {
@@ -26,15 +36,16 @@ const Basket = () => {
   if (count > 0)
     return (
       <>
-        <table style={{ border: '1px solid black', width: '100%', maxWidth: '700px', margin: '0 auto' }}>
+        <table style={{ border: '1px solid black', width: '100%', maxWidth: '800px', margin: '0 auto' }}>
           <tr>
             <th style={{ textAlign: 'left', border: '1px solid black' }}></th>
-            <th style={{ textAlign: 'left', border: '1px solid black' }}>Name</th>
-            <th style={{ textAlign: 'center', border: '1px solid black' }}>Quantity</th>
-            <th style={{ textAlign: 'center', border: '1px solid black' }}>Date of the game</th>
+            <th style={{ textAlign: 'left', border: '1px solid black' }}>Activity name</th>
+            <th style={{ textAlign: 'center', border: '1px solid black' }}>No. of participants</th>
+            <th style={{ textAlign: 'center', border: '1px solid black' }}>Game date/time</th>
           </tr>
 
           {basketProducts.map((product) => {
+            console.log(product);
             return (
               <tr key={product.databaseId}>
                 <td style={{ textAlign: 'center', border: '1px solid black' }}>
@@ -45,8 +56,27 @@ const Basket = () => {
                   <button onClick={() => decrease(product.databaseId)}>-</button> {product.quantity}
                   <button onClick={() => increase(product.databaseId)}>+</button>
                 </td>
-                <td style={{ textAlign: 'center' }}>
-                  <input type='datetime-local' name='' id='' />
+                <td style={{ textAlign: 'center', display: 'flex', gap: '8px' }}>
+                  <input
+                    type='date'
+                    onChange={(e) => {
+                      setEventDate(e, product.databaseId);
+                    }}
+                    name=''
+                    value={product.eventDate ? formatDate(product.eventDate) : ''}
+                    id=''
+                  />
+                  <select
+                    value={product.eventTime ? product.eventTime : '---'}
+                    name=''
+                    id=''
+                    onChange={(e) => setEventTime(e, product.databaseId)}
+                  >
+                    <option value='---'>---</option>
+                    <option value='morning'>Morning</option>
+                    <option value='afternoon'>Afternoon</option>
+                    <option value='evening'>Evening</option>
+                  </select>
                 </td>
               </tr>
             );
