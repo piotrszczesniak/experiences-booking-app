@@ -3,16 +3,13 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 
 import { GetProductQuery } from '@/generated/graphql';
 import { ChangeEvent } from 'react';
-
+type EventTime = 'morning' | 'afternoon' | 'evening';
 type Product = GetProductQuery['product'];
-type BasketProduct = Product & { quantity: number } & {
-  eventDate: Date;
-  eventTime: 'morning' | 'afternoon' | 'evening';
-};
 
-/** // todo
- * !! there is issue: when i pick da game date/time of one product, and after that i add another product the game date/time reset!
- */
+type BasketProduct = { quantity: number } & {
+  eventDate: Date;
+  eventTime: EventTime;
+} & Product;
 
 type BasketStore = {
   count: number;
@@ -20,7 +17,7 @@ type BasketStore = {
   basketProducts: BasketProduct[];
   increase: (productId: number) => void;
   decrease: (productId: number) => void;
-  addToBasket: (product: Product) => void;
+  addToBasket: (product: Product, productQuantity: number) => void;
   removeFromBasket: (productId: number) => void;
   dateFrom: Date;
   dateTo: Date;
@@ -146,28 +143,37 @@ const useBasketStore = create<BasketStore>((set) => ({
       };
     }),
 
-  addToBasket: (product: Product) =>
+  addToBasket: (product, productQuantity = 1) =>
     set((state) => {
-      // update products
       const updatedProducts = [...state.products, product];
 
-      // update basketProducts
-      const mapProducts = new Map();
-      updatedProducts.forEach((product) => {
-        if (mapProducts.has(product?.databaseId)) {
-          mapProducts.get(product?.databaseId).quantity += 1;
-        } else {
-          const newProduct = { ...product, quantity: 1 };
-          mapProducts.set(product?.databaseId, newProduct);
-        }
-      });
+      const productIndex = state.basketProducts.findIndex((item) => item.databaseId === product?.databaseId);
 
-      // convert Map(key, value) object to Array
-      const updatedBasketProducts = Array.from(mapProducts.values());
+      let updatedBasketProducts: BasketProduct[];
+
+      if (productIndex === -1) {
+        updatedBasketProducts = [
+          ...state.basketProducts,
+          {
+            ...product,
+            quantity: productQuantity,
+            eventDate: new Date(),
+            eventTime: 'morning' as EventTime,
+          } as BasketProduct,
+        ];
+      } else {
+        updatedBasketProducts = state.basketProducts.map((item, index) => {
+          if (index === productIndex) {
+            return { ...item, quantity: item.quantity + productQuantity };
+          } else {
+            return item;
+          }
+        });
+      }
 
       return {
         ...state,
-        count: state.count + 1,
+        count: state.count + productQuantity,
         products: updatedProducts,
         basketProducts: updatedBasketProducts,
       };
