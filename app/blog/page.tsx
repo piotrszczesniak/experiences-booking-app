@@ -37,7 +37,6 @@ const BlogHome = async () => {
       <div className="pagination">
         <PaginationControls
           hasNextPage={pageInfo?.hasNextPage}
-          endCursor={pageInfo?.endCursor}
           currentPage={1} // Set current page to 1, since this is the main page
           total={pageInfo?.total}
         />
