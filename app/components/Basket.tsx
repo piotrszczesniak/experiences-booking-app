@@ -45,7 +45,6 @@ const Basket = () => {
           </tr>
 
           {basketProducts.map((product) => {
-            console.log(product);
             return (
               <tr key={product.databaseId}>
                 <td style={{ textAlign: 'center', border: '1px solid black' }}>

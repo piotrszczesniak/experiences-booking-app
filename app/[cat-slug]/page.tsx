@@ -31,7 +31,7 @@ const CategoryHome = async ({ params }: { params: { ['cat-slug']: string } }) =>
             return (
               <li key={index}>
                 <Link href={`/experiences/${item?.slug}` || ''}>{item.name}</Link>
-                <button>add to cart</button>
+                <button>add to basket</button>
               </li>
             );
           }

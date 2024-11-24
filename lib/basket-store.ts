@@ -16,7 +16,7 @@ type BasketStore = {
   basketProducts: BasketProduct[];
   increase: (productId: number) => void;
   decrease: (productId: number) => void;
-  addToBasket: (product: Product, productQuantity: number) => void;
+  addToBasket: (product: Product, productQuantity?: number) => void;
   removeFromBasket: (productId: number) => void;
   dateFrom: Date;
   dateTo: Date;
