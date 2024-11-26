@@ -25,11 +25,15 @@ const BlogHome = async () => {
   const posts: Post[] = data?.posts?.nodes;
   const pageInfo = data?.posts?.pageInfo;
 
+  if (!posts || posts.length === 0) {
+    return <div>No posts available.</div>;
+  }
+
   return (
     <>
       <ol>
-        {posts?.map((item, index) => (
-          <li key={item.id || index}>
+        {posts.map((item) => (
+          <li key={item.id}>
             <Link href={`/blog/${item.slug}` || ''}>{item.title}</Link>
           </li>
         ))}
@@ -46,14 +50,3 @@ const BlogHome = async () => {
 };
 
 export default BlogHome;
-
-//blog
-//--[slug]
-//    page.tsx
-//--page
-//----[pageNumber]
-//     page.tsx
-//     blog/page/:pageNumber
-//     blog/page/1 === blog
-//     blog/page/2
-//     blog/page/3
