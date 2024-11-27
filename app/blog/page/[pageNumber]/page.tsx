@@ -13,6 +13,7 @@ const BlogPageNumber = async ({
 
   try {
     // Fetch posts and total count in one request using _embed for extra data
+    // TODO: extract url to variable
     const response = await fetch(
       `https://bumperball.pl/wp-json/wp/v2/posts?offset=${offset}&per_page=${POSTS_PER_PAGE}&_embed`,
       { next: { revalidate: 10 } } // Enable ISR revalidation
@@ -34,6 +35,7 @@ const BlogPageNumber = async ({
     return (
       <>
         <ol>
+          {/* //TODO: type posts */}
           {posts.map((post: any) => (
             <li key={post.id}>
               <Link href={`/blog/${post.slug}`}>{post.title.rendered}</Link>
