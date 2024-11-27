@@ -573,6 +573,7 @@ export type CartItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Error that occurred when adding an item to the cart. */
@@ -772,6 +773,7 @@ export type CartToCartItemConnectionPageInfo = CartItemConnectionPageInfo & Page
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CartToCartItemConnection connection */
@@ -941,6 +943,7 @@ export type CategoryConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -990,6 +993,7 @@ export type CategoryToAncestorsCategoryConnectionPageInfo = CategoryConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Category type and the category type */
@@ -1025,6 +1029,7 @@ export type CategoryToCategoryConnectionPageInfo = CategoryConnectionPageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CategoryToCategoryConnection connection */
@@ -1106,6 +1111,7 @@ export type CategoryToContentNodeConnectionPageInfo = ContentNodeConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CategoryToContentNodeConnection connection */
@@ -1190,6 +1196,7 @@ export type CategoryToPostConnectionPageInfo = PageInfo & PostConnectionPageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CategoryToPostConnection connection */
@@ -1446,6 +1453,7 @@ export type CommentConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single comment node. Default is "ID". To be used along with the "id" field. */
@@ -1501,6 +1509,7 @@ export type CommentToCommentConnectionPageInfo = CommentConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CommentToCommentConnection connection */
@@ -1838,6 +1847,7 @@ export type ContentNodeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -1912,6 +1922,7 @@ export type ContentNodeToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the ContentNode type and the EnqueuedStylesheet type */
@@ -1947,6 +1958,7 @@ export type ContentNodeToEnqueuedStylesheetConnectionPageInfo = EnqueuedStyleshe
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The template assigned to a node of content */
@@ -2075,6 +2087,7 @@ export type ContentTypeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Allowed Content Types */
@@ -2130,6 +2143,7 @@ export type ContentTypeToContentNodeConnectionPageInfo = ContentNodeConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ContentTypeToContentNodeConnection connection */
@@ -2205,6 +2219,7 @@ export type ContentTypeToTaxonomyConnectionPageInfo = PageInfo & TaxonomyConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Allowed Content Types of the Category taxonomy. */
@@ -2747,6 +2762,7 @@ export type CouponConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Coupon. Default is ID. */
@@ -2818,6 +2834,7 @@ export type CouponLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Coupon type and the Customer type */
@@ -2853,6 +2870,7 @@ export type CouponToCustomerConnectionPageInfo = CustomerConnectionPageInfo & Pa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToCustomerConnection connection */
@@ -2904,6 +2922,7 @@ export type CouponToExcludedProductCategoriesConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToExcludedProductCategoriesConnection connection */
@@ -2985,6 +3004,7 @@ export type CouponToExcludedProductsConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToExcludedProductsConnection connection */
@@ -3098,6 +3118,7 @@ export type CouponToProductCategoryConnectionPageInfo = PageInfo & ProductCatego
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToProductCategoryConnection connection */
@@ -3179,6 +3200,7 @@ export type CouponToProductConnectionPageInfo = PageInfo & ProductConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToProductConnection connection */
@@ -4405,6 +4427,7 @@ export type CustomerConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Customer type and the DownloadableItem type */
@@ -4440,6 +4463,7 @@ export type CustomerToDownloadableItemConnectionPageInfo = DownloadableItemConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CustomerToDownloadableItemConnection connection */
@@ -4485,6 +4509,7 @@ export type CustomerToOrderConnectionPageInfo = OrderConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CustomerToOrderConnection connection */
@@ -4548,6 +4573,7 @@ export type CustomerToRefundConnectionPageInfo = PageInfo & RefundConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CustomerToRefundConnection connection */
@@ -5371,6 +5397,7 @@ export type DownloadableItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Relational context between connected nodes */
@@ -5492,6 +5519,7 @@ export type EnqueuedScriptConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Stylesheet enqueued by the CMS */
@@ -5567,6 +5595,7 @@ export type EnqueuedStylesheetConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** A external product object */
@@ -6199,6 +6228,7 @@ export type ExternalProductToVariationAttributeConnectionPageInfo = PageInfo & V
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** a fee line object */
@@ -6266,6 +6296,7 @@ export type FeeLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Fee line data. */
@@ -6398,6 +6429,7 @@ export type GlobalProductAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the GlobalProductAttribute type and the TermNode type */
@@ -6433,6 +6465,7 @@ export type GlobalProductAttributeToTermNodeConnectionPageInfo = PageInfo & Term
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the GlobalProductAttributeToTermNodeConnection connection */
@@ -7097,6 +7130,7 @@ export type GroupProductToProductConnectionPageInfo = PageInfo & ProductConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the GroupProductToProductConnection connection */
@@ -7210,6 +7244,7 @@ export type GroupProductToVariationAttributeConnectionPageInfo = PageInfo & Vari
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Content node with hierarchical (parent/child) relationships */
@@ -7357,6 +7392,7 @@ export type HierarchicalContentNodeToContentNodeAncestorsConnectionPageInfo = Co
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the HierarchicalContentNodeToContentNodeAncestorsConnection connection */
@@ -7432,6 +7468,7 @@ export type HierarchicalContentNodeToContentNodeChildrenConnectionPageInfo = Con
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the HierarchicalContentNodeToContentNodeChildrenConnection connection */
@@ -7661,6 +7698,7 @@ export type LineItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Meta data. */
@@ -7836,6 +7874,7 @@ export type LocalProductAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Product manage stock enumeration */
@@ -8107,6 +8146,7 @@ export type MediaItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -8221,6 +8261,7 @@ export type MediaItemToCommentConnectionPageInfo = CommentConnectionPageInfo & P
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the MediaItemToCommentConnection connection */
@@ -8370,6 +8411,7 @@ export type MenuConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Navigation menu items are the individual items assigned to a menu. These are rendered as the links in a navigation menu. */
@@ -8465,6 +8507,7 @@ export type MenuItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Nodes that can be linked to as Menu Items */
@@ -8548,6 +8591,7 @@ export type MenuItemToMenuItemConnectionPageInfo = MenuItemConnectionPageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the MenuItemToMenuItemConnection connection */
@@ -8634,6 +8678,7 @@ export type MenuToMenuItemConnectionPageInfo = MenuItemConnectionPageInfo & Page
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the MenuToMenuItemConnection connection */
@@ -9276,6 +9321,7 @@ export type OrderConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The cardinality of the connection order */
@@ -9368,6 +9414,7 @@ export type OrderToCommentConnectionPageInfo = CommentConnectionPageInfo & PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the OrderToCommentConnection connection */
@@ -9465,6 +9512,7 @@ export type OrderToCouponLineConnectionPageInfo = CouponLineConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the DownloadableItem type */
@@ -9500,6 +9548,7 @@ export type OrderToDownloadableItemConnectionPageInfo = DownloadableItemConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the OrderToDownloadableItemConnection connection */
@@ -9545,6 +9594,7 @@ export type OrderToFeeLineConnectionPageInfo = FeeLineConnectionPageInfo & PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the LineItem type */
@@ -9580,6 +9630,7 @@ export type OrderToLineItemConnectionPageInfo = LineItemConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the Refund type */
@@ -9615,6 +9666,7 @@ export type OrderToRefundConnectionPageInfo = PageInfo & RefundConnectionPageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the OrderToRefundConnection connection */
@@ -9674,6 +9726,7 @@ export type OrderToShippingLineConnectionPageInfo = PageInfo & ShippingLineConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the TaxLine type */
@@ -9709,6 +9762,7 @@ export type OrderToTaxLineConnectionPageInfo = PageInfo & TaxLineConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Fields to order the Orders connection by */
@@ -9883,6 +9937,7 @@ export type PaBungeeJumpOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -9932,6 +9987,7 @@ export type PaBungeeJumpOptionKrakowToContentNodeConnectionPageInfo = ContentNod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaBungeeJumpOptionKrakowToContentNodeConnection connection */
@@ -10007,6 +10063,7 @@ export type PaBungeeJumpOptionKrakowToProductConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaBungeeJumpOptionKrakowToProductConnection connection */
@@ -10120,6 +10177,7 @@ export type PaBungeeJumpOptionKrakowToProductVariationConnectionPageInfo = PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaBungeeJumpOptionKrakowToProductVariationConnection connection */
@@ -10345,6 +10403,7 @@ export type PaGoKartingOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -10394,6 +10453,7 @@ export type PaGoKartingOptionKrakowToContentNodeConnectionPageInfo = ContentNode
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGoKartingOptionKrakowToContentNodeConnection connection */
@@ -10469,6 +10529,7 @@ export type PaGoKartingOptionKrakowToProductConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGoKartingOptionKrakowToProductConnection connection */
@@ -10582,6 +10643,7 @@ export type PaGoKartingOptionKrakowToProductVariationConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGoKartingOptionKrakowToProductVariationConnection connection */
@@ -10807,6 +10869,7 @@ export type PaGroupSizeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -10856,6 +10919,7 @@ export type PaGroupSizeToContentNodeConnectionPageInfo = ContentNodeConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGroupSizeToContentNodeConnection connection */
@@ -10931,6 +10995,7 @@ export type PaGroupSizeToProductConnectionPageInfo = PageInfo & ProductConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGroupSizeToProductConnection connection */
@@ -11044,6 +11109,7 @@ export type PaGroupSizeToProductVariationConnectionPageInfo = PageInfo & Product
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGroupSizeToProductVariationConnection connection */
@@ -11269,6 +11335,7 @@ export type PaKatowiceAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -11318,6 +11385,7 @@ export type PaKatowiceAirportToContentNodeConnectionPageInfo = ContentNodeConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKatowiceAirportToContentNodeConnection connection */
@@ -11393,6 +11461,7 @@ export type PaKatowiceAirportToProductConnectionPageInfo = PageInfo & ProductCon
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKatowiceAirportToProductConnection connection */
@@ -11506,6 +11575,7 @@ export type PaKatowiceAirportToProductVariationConnectionPageInfo = PageInfo & P
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKatowiceAirportToProductVariationConnection connection */
@@ -11731,6 +11801,7 @@ export type PaKrakowAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -11780,6 +11851,7 @@ export type PaKrakowAirportToContentNodeConnectionPageInfo = ContentNodeConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKrakowAirportToContentNodeConnection connection */
@@ -11855,6 +11927,7 @@ export type PaKrakowAirportToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKrakowAirportToProductConnection connection */
@@ -11968,6 +12041,7 @@ export type PaKrakowAirportToProductVariationConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKrakowAirportToProductVariationConnection connection */
@@ -12193,6 +12267,7 @@ export type PaOffRoadOptionConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -12242,6 +12317,7 @@ export type PaOffRoadOptionToContentNodeConnectionPageInfo = ContentNodeConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaOffRoadOptionToContentNodeConnection connection */
@@ -12317,6 +12393,7 @@ export type PaOffRoadOptionToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaOffRoadOptionToProductConnection connection */
@@ -12430,6 +12507,7 @@ export type PaOffRoadOptionToProductVariationConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaOffRoadOptionToProductVariationConnection connection */
@@ -12655,6 +12733,7 @@ export type PaPaintballOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -12704,6 +12783,7 @@ export type PaPaintballOptionKrakowToContentNodeConnectionPageInfo = ContentNode
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionKrakowToContentNodeConnection connection */
@@ -12779,6 +12859,7 @@ export type PaPaintballOptionKrakowToProductConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionKrakowToProductConnection connection */
@@ -12892,6 +12973,7 @@ export type PaPaintballOptionKrakowToProductVariationConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionKrakowToProductVariationConnection connection */
@@ -13117,6 +13199,7 @@ export type PaPaintballOptionWarsawConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -13166,6 +13249,7 @@ export type PaPaintballOptionWarsawToContentNodeConnectionPageInfo = ContentNode
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionWarsawToContentNodeConnection connection */
@@ -13241,6 +13325,7 @@ export type PaPaintballOptionWarsawToProductConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionWarsawToProductConnection connection */
@@ -13354,6 +13439,7 @@ export type PaPaintballOptionWarsawToProductVariationConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionWarsawToProductVariationConnection connection */
@@ -13579,6 +13665,7 @@ export type PaPigeonsOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -13628,6 +13715,7 @@ export type PaPigeonsOptionKrakowToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionKrakowToContentNodeConnection connection */
@@ -13703,6 +13791,7 @@ export type PaPigeonsOptionKrakowToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionKrakowToProductConnection connection */
@@ -13816,6 +13905,7 @@ export type PaPigeonsOptionKrakowToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionKrakowToProductVariationConnection connection */
@@ -14041,6 +14131,7 @@ export type PaPigeonsOptionWarsawConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -14090,6 +14181,7 @@ export type PaPigeonsOptionWarsawToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionWarsawToContentNodeConnection connection */
@@ -14165,6 +14257,7 @@ export type PaPigeonsOptionWarsawToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionWarsawToProductConnection connection */
@@ -14278,6 +14371,7 @@ export type PaPigeonsOptionWarsawToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionWarsawToProductVariationConnection connection */
@@ -14503,6 +14597,7 @@ export type PaQuadBikingOptionConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -14552,6 +14647,7 @@ export type PaQuadBikingOptionToContentNodeConnectionPageInfo = ContentNodeConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaQuadBikingOptionToContentNodeConnection connection */
@@ -14627,6 +14723,7 @@ export type PaQuadBikingOptionToProductConnectionPageInfo = PageInfo & ProductCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaQuadBikingOptionToProductConnection connection */
@@ -14740,6 +14837,7 @@ export type PaQuadBikingOptionToProductVariationConnectionPageInfo = PageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaQuadBikingOptionToProductVariationConnection connection */
@@ -14965,6 +15063,7 @@ export type PaShootingOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -15014,6 +15113,7 @@ export type PaShootingOptionKrakowToContentNodeConnectionPageInfo = ContentNodeC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionKrakowToContentNodeConnection connection */
@@ -15089,6 +15189,7 @@ export type PaShootingOptionKrakowToProductConnectionPageInfo = PageInfo & Produ
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionKrakowToProductConnection connection */
@@ -15202,6 +15303,7 @@ export type PaShootingOptionKrakowToProductVariationConnectionPageInfo = PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionKrakowToProductVariationConnection connection */
@@ -15427,6 +15529,7 @@ export type PaShootingOptionWarsawConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -15476,6 +15579,7 @@ export type PaShootingOptionWarsawToContentNodeConnectionPageInfo = ContentNodeC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionWarsawToContentNodeConnection connection */
@@ -15551,6 +15655,7 @@ export type PaShootingOptionWarsawToProductConnectionPageInfo = PageInfo & Produ
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionWarsawToProductConnection connection */
@@ -15664,6 +15769,7 @@ export type PaShootingOptionWarsawToProductVariationConnectionPageInfo = PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionWarsawToProductVariationConnection connection */
@@ -15889,6 +15995,7 @@ export type PaWarsawChopinAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -15938,6 +16045,7 @@ export type PaWarsawChopinAirportToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawChopinAirportToContentNodeConnection connection */
@@ -16013,6 +16121,7 @@ export type PaWarsawChopinAirportToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawChopinAirportToProductConnection connection */
@@ -16126,6 +16235,7 @@ export type PaWarsawChopinAirportToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawChopinAirportToProductVariationConnection connection */
@@ -16351,6 +16461,7 @@ export type PaWarsawModlinAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -16400,6 +16511,7 @@ export type PaWarsawModlinAirportToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawModlinAirportToContentNodeConnection connection */
@@ -16475,6 +16587,7 @@ export type PaWarsawModlinAirportToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawModlinAirportToProductConnection connection */
@@ -16588,6 +16701,7 @@ export type PaWarsawModlinAirportToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawModlinAirportToProductVariationConnection connection */
@@ -16813,6 +16927,7 @@ export type PaWhiskyOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -16862,6 +16977,7 @@ export type PaWhiskyOptionKrakowToContentNodeConnectionPageInfo = ContentNodeCon
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWhiskyOptionKrakowToContentNodeConnection connection */
@@ -16937,6 +17053,7 @@ export type PaWhiskyOptionKrakowToProductConnectionPageInfo = PageInfo & Product
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWhiskyOptionKrakowToProductConnection connection */
@@ -17050,6 +17167,7 @@ export type PaWhiskyOptionKrakowToProductVariationConnectionPageInfo = PageInfo 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWhiskyOptionKrakowToProductVariationConnection connection */
@@ -17367,6 +17485,7 @@ export type PageConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -17424,6 +17543,7 @@ export type PageToCommentConnectionPageInfo = CommentConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PageToCommentConnection connection */
@@ -17530,6 +17650,7 @@ export type PageToRevisionConnectionPageInfo = PageConnectionPageInfo & PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PageToRevisionConnection connection */
@@ -17621,6 +17742,7 @@ export type PaymentGatewayConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** An plugin object */
@@ -17676,6 +17798,7 @@ export type PluginConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The status of the WordPress plugin. */
@@ -17964,6 +18087,7 @@ export type PostConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The postFormat type */
@@ -18090,6 +18214,7 @@ export type PostFormatConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -18139,6 +18264,7 @@ export type PostFormatToContentNodeConnectionPageInfo = ContentNodeConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostFormatToContentNodeConnection connection */
@@ -18214,6 +18340,7 @@ export type PostFormatToPostConnectionPageInfo = PageInfo & PostConnectionPageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostFormatToPostConnection connection */
@@ -18474,6 +18601,7 @@ export type PostToCategoryConnectionPageInfo = CategoryConnectionPageInfo & Page
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToCategoryConnection connection */
@@ -18555,6 +18683,7 @@ export type PostToCommentConnectionPageInfo = CommentConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToCommentConnection connection */
@@ -18654,6 +18783,7 @@ export type PostToPostFormatConnectionPageInfo = PageInfo & PostFormatConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToPostFormatConnection connection */
@@ -18744,6 +18874,7 @@ export type PostToRevisionConnectionPageInfo = PageInfo & PostConnectionPageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToRevisionConnection connection */
@@ -18847,6 +18978,7 @@ export type PostToTagConnectionPageInfo = PageInfo & TagConnectionPageInfo & WpP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToTagConnection connection */
@@ -18928,6 +19060,7 @@ export type PostToTermNodeConnectionPageInfo = PageInfo & TermNodeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToTermNodeConnection connection */
@@ -20027,6 +20160,7 @@ export type ProductAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Options for ordering the connection */
@@ -20215,6 +20349,7 @@ export type ProductCategoryConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Product category display type enumeration */
@@ -20276,6 +20411,7 @@ export type ProductCategoryToAncestorsProductCategoryConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the ProductCategory type and the ContentNode type */
@@ -20311,6 +20447,7 @@ export type ProductCategoryToContentNodeConnectionPageInfo = ContentNodeConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductCategoryToContentNodeConnection connection */
@@ -20395,6 +20532,7 @@ export type ProductCategoryToProductCategoryConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductCategoryToProductCategoryConnection connection */
@@ -20476,6 +20614,7 @@ export type ProductCategoryToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductCategoryToProductConnection connection */
@@ -20606,6 +20745,7 @@ export type ProductConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The &quot;ProductDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -20872,6 +21012,7 @@ export type ProductTagConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -20921,6 +21062,7 @@ export type ProductTagToContentNodeConnectionPageInfo = ContentNodeConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTagToContentNodeConnection connection */
@@ -20996,6 +21138,7 @@ export type ProductTagToProductConnectionPageInfo = PageInfo & ProductConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTagToProductConnection connection */
@@ -21167,6 +21310,7 @@ export type ProductToCommentConnectionPageInfo = CommentConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToCommentConnection connection */
@@ -21264,6 +21408,7 @@ export type ProductToCommentsConnectionPageInfo = CommentConnectionPageInfo & Pa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToCommentsConnection connection */
@@ -21361,6 +21506,7 @@ export type ProductToGlobalProductAttributeConnectionPageInfo = GlobalProductAtt
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToGlobalProductAttributeConnection connection */
@@ -21402,6 +21548,7 @@ export type ProductToLocalProductAttributeConnectionPageInfo = LocalProductAttri
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToLocalProductAttributeConnection connection */
@@ -21443,6 +21590,7 @@ export type ProductToMediaItemConnectionPageInfo = MediaItemConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToMediaItemConnection connection */
@@ -21526,6 +21674,7 @@ export type ProductToPaBungeeJumpOptionKrakowConnectionPageInfo = PaBungeeJumpOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaBungeeJumpOptionKrakowConnection connection */
@@ -21609,6 +21758,7 @@ export type ProductToPaGoKartingOptionKrakowConnectionPageInfo = PaGoKartingOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaGoKartingOptionKrakowConnection connection */
@@ -21692,6 +21842,7 @@ export type ProductToPaGroupSizeConnectionPageInfo = PaGroupSizeConnectionPageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaGroupSizeConnection connection */
@@ -21775,6 +21926,7 @@ export type ProductToPaKatowiceAirportConnectionPageInfo = PaKatowiceAirportConn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaKatowiceAirportConnection connection */
@@ -21858,6 +22010,7 @@ export type ProductToPaKrakowAirportConnectionPageInfo = PaKrakowAirportConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaKrakowAirportConnection connection */
@@ -21941,6 +22094,7 @@ export type ProductToPaOffRoadOptionConnectionPageInfo = PaOffRoadOptionConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaOffRoadOptionConnection connection */
@@ -22024,6 +22178,7 @@ export type ProductToPaPaintballOptionKrakowConnectionPageInfo = PaPaintballOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPaintballOptionKrakowConnection connection */
@@ -22107,6 +22262,7 @@ export type ProductToPaPaintballOptionWarsawConnectionPageInfo = PaPaintballOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPaintballOptionWarsawConnection connection */
@@ -22190,6 +22346,7 @@ export type ProductToPaPigeonsOptionKrakowConnectionPageInfo = PaPigeonsOptionKr
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPigeonsOptionKrakowConnection connection */
@@ -22273,6 +22430,7 @@ export type ProductToPaPigeonsOptionWarsawConnectionPageInfo = PaPigeonsOptionWa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPigeonsOptionWarsawConnection connection */
@@ -22356,6 +22514,7 @@ export type ProductToPaQuadBikingOptionConnectionPageInfo = PaQuadBikingOptionCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaQuadBikingOptionConnection connection */
@@ -22439,6 +22598,7 @@ export type ProductToPaShootingOptionKrakowConnectionPageInfo = PaShootingOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaShootingOptionKrakowConnection connection */
@@ -22522,6 +22682,7 @@ export type ProductToPaShootingOptionWarsawConnectionPageInfo = PaShootingOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaShootingOptionWarsawConnection connection */
@@ -22605,6 +22766,7 @@ export type ProductToPaWarsawChopinAirportConnectionPageInfo = PaWarsawChopinAir
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaWarsawChopinAirportConnection connection */
@@ -22688,6 +22850,7 @@ export type ProductToPaWarsawModlinAirportConnectionPageInfo = PaWarsawModlinAir
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaWarsawModlinAirportConnection connection */
@@ -22771,6 +22934,7 @@ export type ProductToPaWhiskyOptionKrakowConnectionPageInfo = PaWhiskyOptionKrak
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaWhiskyOptionKrakowConnection connection */
@@ -22939,6 +23103,7 @@ export type ProductToProductAttributeConnectionPageInfo = PageInfo & ProductAttr
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductAttributeConnection connection */
@@ -22982,6 +23147,7 @@ export type ProductToProductCategoryConnectionPageInfo = PageInfo & ProductCateg
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductCategoryConnection connection */
@@ -23063,6 +23229,7 @@ export type ProductToProductConnectionPageInfo = PageInfo & ProductConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductConnection connection */
@@ -23178,6 +23345,7 @@ export type ProductToProductTagConnectionPageInfo = PageInfo & ProductTagConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductTagConnection connection */
@@ -23261,6 +23429,7 @@ export type ProductToProductTypeConnectionPageInfo = PageInfo & ProductTypeConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductTypeConnection connection */
@@ -23344,6 +23513,7 @@ export type ProductToShippingClassConnectionPageInfo = PageInfo & ShippingClassC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToShippingClassConnection connection */
@@ -23425,6 +23595,7 @@ export type ProductToTermNodeConnectionPageInfo = PageInfo & TermNodeConnectionP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToTermNodeConnection connection */
@@ -23508,6 +23679,7 @@ export type ProductToUpsellConnectionPageInfo = PageInfo & ProductConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToUpsellConnection connection */
@@ -23623,6 +23795,7 @@ export type ProductToVisibleProductConnectionPageInfo = PageInfo & VisibleProduc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToVisibleProductConnection connection */
@@ -23795,6 +23968,7 @@ export type ProductTypeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -23844,6 +24018,7 @@ export type ProductTypeToContentNodeConnectionPageInfo = ContentNodeConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTypeToContentNodeConnection connection */
@@ -23919,6 +24094,7 @@ export type ProductTypeToProductConnectionPageInfo = PageInfo & ProductConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTypeToProductConnection connection */
@@ -24272,6 +24448,7 @@ export type ProductVariationConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single ProductVariation. Default is ID. */
@@ -24315,6 +24492,7 @@ export type ProductVariationToShippingClassConnectionPageInfo = PageInfo & Shipp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductVariationToShippingClassConnection connection */
@@ -24405,6 +24583,7 @@ export type ProductVariationToVariationAttributeConnectionPageInfo = PageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the ProductVariation type and the visibleProduct type */
@@ -24440,6 +24619,7 @@ export type ProductVariationToVisibleProductConnectionPageInfo = PageInfo & Visi
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductVariationToVisibleProductConnection connection */
@@ -24620,6 +24800,7 @@ export type RefundConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Refund. Default is ID. */
@@ -26994,6 +27175,7 @@ export type RootQueryToCategoryConnectionPageInfo = CategoryConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCategoryConnection connection */
@@ -27075,6 +27257,7 @@ export type RootQueryToCommentConnectionPageInfo = CommentConnectionPageInfo & P
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCommentConnection connection */
@@ -27172,6 +27355,7 @@ export type RootQueryToContentNodeConnectionPageInfo = ContentNodeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToContentNodeConnection connection */
@@ -27247,6 +27431,7 @@ export type RootQueryToContentTypeConnectionPageInfo = ContentTypeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the Coupon type */
@@ -27282,6 +27467,7 @@ export type RootQueryToCouponConnectionPageInfo = CouponConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCouponConnection connection */
@@ -27339,6 +27525,7 @@ export type RootQueryToCustomerConnectionPageInfo = CustomerConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCustomerConnection connection */
@@ -27390,6 +27577,7 @@ export type RootQueryToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the EnqueuedStylesheet type */
@@ -27425,6 +27613,7 @@ export type RootQueryToEnqueuedStylesheetConnectionPageInfo = EnqueuedStylesheet
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the mediaItem type */
@@ -27460,6 +27649,7 @@ export type RootQueryToMediaItemConnectionPageInfo = MediaItemConnectionPageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToMediaItemConnection connection */
@@ -27541,6 +27731,7 @@ export type RootQueryToMenuConnectionPageInfo = MenuConnectionPageInfo & PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToMenuConnection connection */
@@ -27586,6 +27777,7 @@ export type RootQueryToMenuItemConnectionPageInfo = MenuItemConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToMenuItemConnection connection */
@@ -27633,6 +27825,7 @@ export type RootQueryToOrderConnectionPageInfo = OrderConnectionPageInfo & PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToOrderConnection connection */
@@ -27696,6 +27889,7 @@ export type RootQueryToPaBungeeJumpOptionKrakowConnectionPageInfo = PaBungeeJump
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaBungeeJumpOptionKrakowConnection connection */
@@ -27777,6 +27971,7 @@ export type RootQueryToPaGoKartingOptionKrakowConnectionPageInfo = PaGoKartingOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaGoKartingOptionKrakowConnection connection */
@@ -27858,6 +28053,7 @@ export type RootQueryToPaGroupSizeConnectionPageInfo = PaGroupSizeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaGroupSizeConnection connection */
@@ -27939,6 +28135,7 @@ export type RootQueryToPaKatowiceAirportConnectionPageInfo = PaKatowiceAirportCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaKatowiceAirportConnection connection */
@@ -28020,6 +28217,7 @@ export type RootQueryToPaKrakowAirportConnectionPageInfo = PaKrakowAirportConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaKrakowAirportConnection connection */
@@ -28101,6 +28299,7 @@ export type RootQueryToPaOffRoadOptionConnectionPageInfo = PaOffRoadOptionConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaOffRoadOptionConnection connection */
@@ -28182,6 +28381,7 @@ export type RootQueryToPaPaintballOptionKrakowConnectionPageInfo = PaPaintballOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPaintballOptionKrakowConnection connection */
@@ -28263,6 +28463,7 @@ export type RootQueryToPaPaintballOptionWarsawConnectionPageInfo = PaPaintballOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPaintballOptionWarsawConnection connection */
@@ -28344,6 +28545,7 @@ export type RootQueryToPaPigeonsOptionKrakowConnectionPageInfo = PaPigeonsOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPigeonsOptionKrakowConnection connection */
@@ -28425,6 +28627,7 @@ export type RootQueryToPaPigeonsOptionWarsawConnectionPageInfo = PaPigeonsOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPigeonsOptionWarsawConnection connection */
@@ -28506,6 +28709,7 @@ export type RootQueryToPaQuadBikingOptionConnectionPageInfo = PaQuadBikingOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaQuadBikingOptionConnection connection */
@@ -28587,6 +28791,7 @@ export type RootQueryToPaShootingOptionKrakowConnectionPageInfo = PaShootingOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaShootingOptionKrakowConnection connection */
@@ -28668,6 +28873,7 @@ export type RootQueryToPaShootingOptionWarsawConnectionPageInfo = PaShootingOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaShootingOptionWarsawConnection connection */
@@ -28749,6 +28955,7 @@ export type RootQueryToPaWarsawChopinAirportConnectionPageInfo = PaWarsawChopinA
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaWarsawChopinAirportConnection connection */
@@ -28830,6 +29037,7 @@ export type RootQueryToPaWarsawModlinAirportConnectionPageInfo = PaWarsawModlinA
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaWarsawModlinAirportConnection connection */
@@ -28911,6 +29119,7 @@ export type RootQueryToPaWhiskyOptionKrakowConnectionPageInfo = PaWhiskyOptionKr
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaWhiskyOptionKrakowConnection connection */
@@ -28992,6 +29201,7 @@ export type RootQueryToPageConnectionPageInfo = PageConnectionPageInfo & PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPageConnection connection */
@@ -29073,6 +29283,7 @@ export type RootQueryToPaymentGatewayConnectionPageInfo = PageInfo & PaymentGate
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaymentGatewayConnection connection */
@@ -29114,6 +29325,7 @@ export type RootQueryToPluginConnectionPageInfo = PageInfo & PluginConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPluginConnection connection */
@@ -29159,6 +29371,7 @@ export type RootQueryToPostConnectionPageInfo = PageInfo & PostConnectionPageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPostConnection connection */
@@ -29260,6 +29473,7 @@ export type RootQueryToPostFormatConnectionPageInfo = PageInfo & PostFormatConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPostFormatConnection connection */
@@ -29341,6 +29555,7 @@ export type RootQueryToProductCategoryConnectionPageInfo = PageInfo & ProductCat
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductCategoryConnection connection */
@@ -29422,6 +29637,7 @@ export type RootQueryToProductConnectionPageInfo = PageInfo & ProductConnectionP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductConnection connection */
@@ -29535,6 +29751,7 @@ export type RootQueryToProductTagConnectionPageInfo = PageInfo & ProductTagConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductTagConnection connection */
@@ -29616,6 +29833,7 @@ export type RootQueryToProductTypeConnectionPageInfo = PageInfo & ProductTypeCon
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductTypeConnection connection */
@@ -29697,6 +29915,7 @@ export type RootQueryToRefundConnectionPageInfo = PageInfo & RefundConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToRefundConnection connection */
@@ -29756,6 +29975,7 @@ export type RootQueryToRevisionsConnectionPageInfo = ContentNodeConnectionPageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToRevisionsConnection connection */
@@ -29831,6 +30051,7 @@ export type RootQueryToShippingClassConnectionPageInfo = PageInfo & ShippingClas
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToShippingClassConnection connection */
@@ -29912,6 +30133,7 @@ export type RootQueryToShippingMethodConnectionPageInfo = PageInfo & ShippingMet
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the tag type */
@@ -29947,6 +30169,7 @@ export type RootQueryToTagConnectionPageInfo = PageInfo & TagConnectionPageInfo 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToTagConnection connection */
@@ -30028,6 +30251,7 @@ export type RootQueryToTaxRateConnectionPageInfo = PageInfo & TaxRateConnectionP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToTaxRateConnection connection */
@@ -30075,6 +30299,7 @@ export type RootQueryToTaxonomyConnectionPageInfo = PageInfo & TaxonomyConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the TermNode type */
@@ -30110,6 +30335,7 @@ export type RootQueryToTermNodeConnectionPageInfo = PageInfo & TermNodeConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToTermNodeConnection connection */
@@ -30193,6 +30419,7 @@ export type RootQueryToThemeConnectionPageInfo = PageInfo & ThemeConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the User type */
@@ -30228,6 +30455,7 @@ export type RootQueryToUserConnectionPageInfo = PageInfo & UserConnectionPageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToUserConnection connection */
@@ -30297,6 +30525,7 @@ export type RootQueryToUserRoleConnectionPageInfo = PageInfo & UserRoleConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the visibleProduct type */
@@ -30332,6 +30561,7 @@ export type RootQueryToVisibleProductConnectionPageInfo = PageInfo & VisibleProd
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToVisibleProductConnection connection */
@@ -30867,6 +31097,7 @@ export type ShippingClassConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -30916,6 +31147,7 @@ export type ShippingClassToContentNodeConnectionPageInfo = ContentNodeConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ShippingClassToContentNodeConnection connection */
@@ -30991,6 +31223,7 @@ export type ShippingClassToProductConnectionPageInfo = PageInfo & ProductConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ShippingClassToProductConnection connection */
@@ -31143,6 +31376,7 @@ export type ShippingLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Shipping lines data. */
@@ -31204,6 +31438,7 @@ export type ShippingMethodConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Shipping Method. Default is ID. */
@@ -31925,6 +32160,7 @@ export type SimpleProductToProductConnectionPageInfo = PageInfo & ProductConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the SimpleProductToProductConnection connection */
@@ -32038,6 +32274,7 @@ export type SimpleProductToVariationAttributeConnectionPageInfo = PageInfo & Var
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Product stock status enumeration */
@@ -32171,6 +32408,7 @@ export type TagConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -32220,6 +32458,7 @@ export type TagToContentNodeConnectionPageInfo = ContentNodeConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the TagToContentNodeConnection connection */
@@ -32295,6 +32534,7 @@ export type TagToPostConnectionPageInfo = PageInfo & PostConnectionPageInfo & Wp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the TagToPostConnection connection */
@@ -32445,6 +32685,7 @@ export type TaxLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** A Tax rate object */
@@ -32520,6 +32761,7 @@ export type TaxRateConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Tax rate. Default is ID. */
@@ -32632,6 +32874,7 @@ export type TaxonomyConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Allowed taxonomies */
@@ -32764,6 +33007,7 @@ export type TaxonomyToContentTypeConnectionPageInfo = ContentTypeConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Taxonomy type and the TermNode type */
@@ -32799,6 +33043,7 @@ export type TaxonomyToTermNodeConnectionPageInfo = PageInfo & TermNodeConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The template assigned to the node */
@@ -33010,6 +33255,7 @@ export type TermNodeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is "ID". To be used along with the "id" field. */
@@ -33059,6 +33305,7 @@ export type TermNodeToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the TermNode type and the EnqueuedStylesheet type */
@@ -33094,6 +33341,7 @@ export type TermNodeToEnqueuedStylesheetConnectionPageInfo = EnqueuedStylesheetC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Options for ordering the connection by */
@@ -33171,6 +33419,7 @@ export type ThemeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Any node that has a URI */
@@ -34591,6 +34840,7 @@ export type UserConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single User node. To be used along with the "id" field. Default is "ID". */
@@ -34654,6 +34904,7 @@ export type UserRoleConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Names of available user roles */
@@ -34723,6 +34974,7 @@ export type UserToCommentConnectionPageInfo = CommentConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToCommentConnection connection */
@@ -34820,6 +35072,7 @@ export type UserToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the User type and the EnqueuedStylesheet type */
@@ -34855,6 +35108,7 @@ export type UserToEnqueuedStylesheetConnectionPageInfo = EnqueuedStylesheetConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the User type and the mediaItem type */
@@ -34890,6 +35144,7 @@ export type UserToMediaItemConnectionPageInfo = MediaItemConnectionPageInfo & Pa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToMediaItemConnection connection */
@@ -34971,6 +35226,7 @@ export type UserToPageConnectionPageInfo = PageConnectionPageInfo & PageInfo & W
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToPageConnection connection */
@@ -35052,6 +35308,7 @@ export type UserToPostConnectionPageInfo = PageInfo & PostConnectionPageInfo & W
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToPostConnection connection */
@@ -35153,6 +35410,7 @@ export type UserToRevisionsConnectionPageInfo = ContentNodeConnectionPageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToRevisionsConnection connection */
@@ -35228,6 +35486,7 @@ export type UserToUserRoleConnectionPageInfo = PageInfo & UserRoleConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Field to order the connection by */
@@ -35956,6 +36215,7 @@ export type VariableProductToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VariableProductToProductConnection connection */
@@ -36069,6 +36329,7 @@ export type VariableProductToProductVariationConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VariableProductToProductVariationConnection connection */
@@ -36182,6 +36443,7 @@ export type VariableProductToVariationAttributeConnectionPageInfo = PageInfo & V
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** A product variation attribute object */
@@ -36229,6 +36491,7 @@ export type VariationAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The visibleProduct type */
@@ -36355,6 +36618,7 @@ export type VisibleProductConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -36404,6 +36668,7 @@ export type VisibleProductToContentNodeConnectionPageInfo = ContentNodeConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VisibleProductToContentNodeConnection connection */
@@ -36479,6 +36744,7 @@ export type VisibleProductToProductConnectionPageInfo = PageInfo & ProductConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VisibleProductToProductConnection connection */
@@ -36580,6 +36846,7 @@ export type WpPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Provides access to fields of the &quot;AcfHeaderMenu&quot; ACF Field Group via the &quot;acfHeaderMenu&quot; field */
@@ -36664,22 +36931,20 @@ export type GetHeaderMenuQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetHeaderMenuQuery = { __typename?: 'RootQuery', acfSiteSettings?: { __typename?: 'AcfSiteSettings', acfHeaderMenu?: { __typename?: 'AcfHeaderMenu', logo?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', mediaItemUrl?: string | null } } | null, menuItems?: Array<{ __typename?: 'AcfHeaderMenuMenuItems', label?: string | null, hasChildItems?: boolean | null, link?: string | null, childMenuItems?: Array<{ __typename?: 'AcfHeaderMenuMenuItemsChildMenuItems', label?: string | null, link?: string | null } | null> | null } | null> | null } | null } | null };
 
-export type GetPostsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetPostsQueryVariables = Exact<{
+  first?: InputMaybe<Scalars['Int']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+}>;
 
 
-export type GetPostsQuery = { __typename?: 'RootQuery', posts?: { __typename?: 'RootQueryToPostConnection', nodes: Array<{ __typename?: 'Post', title?: string | null, excerpt?: string | null, slug?: string | null, categories?: { __typename?: 'PostToCategoryConnection', nodes: Array<{ __typename?: 'Category', name?: string | null, categoryId?: number | null, slug?: string | null }> } | null, featuredImage?: { __typename?: 'NodeWithFeaturedImageToMediaItemConnectionEdge', node: { __typename?: 'MediaItem', mediaItemUrl?: string | null, altText?: string | null, mediaDetails?: { __typename?: 'MediaDetails', sizes?: Array<{ __typename?: 'MediaSize', height?: string | null, width?: string | null, name?: string | null } | null> | null } | null } } | null }> } | null };
-
-export type GetPostsSlugsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type GetPostsSlugsQuery = { __typename?: 'RootQuery', posts?: { __typename?: 'RootQueryToPostConnection', edges: Array<{ __typename?: 'RootQueryToPostConnectionEdge', node: { __typename?: 'Post', slug?: string | null } }> } | null };
+export type GetPostsQuery = { __typename?: 'RootQuery', posts?: { __typename?: 'RootQueryToPostConnection', pageInfo: { __typename?: 'RootQueryToPostConnectionPageInfo', hasNextPage: boolean, endCursor?: string | null, total?: number | null }, nodes: Array<{ __typename?: 'Post', id: string, title?: string | null, excerpt?: string | null, slug?: string | null, date?: string | null, categories?: { __typename?: 'PostToCategoryConnection', nodes: Array<{ __typename?: 'Category', name?: string | null, categoryId?: number | null, slug?: string | null }> } | null, featuredImage?: { __typename?: 'NodeWithFeaturedImageToMediaItemConnectionEdge', node: { __typename?: 'MediaItem', mediaItemUrl?: string | null, altText?: string | null, mediaDetails?: { __typename?: 'MediaDetails', sizes?: Array<{ __typename?: 'MediaSize', height?: string | null, width?: string | null, name?: string | null } | null> | null } | null } } | null }> } | null };
 
 export type GetPostQueryVariables = Exact<{
   id: Scalars['ID']['input'];
 }>;
 
 
-export type GetPostQuery = { __typename?: 'RootQuery', post?: { __typename?: 'Post', title?: string | null, content?: string | null, date?: string | null, author?: { __typename?: 'NodeWithAuthorToUserConnectionEdge', node: { __typename?: 'User', firstName?: string | null, lastName?: string | null } } | null } | null };
+export type GetPostQuery = { __typename?: 'RootQuery', post?: { __typename?: 'Post', title?: string | null, content?: string | null, date?: string | null, author?: { __typename?: 'NodeWithAuthorToUserConnectionEdge', node: { __typename?: 'User', firstName?: string | null, lastName?: string | null } } | null, categories?: { __typename?: 'PostToCategoryConnection', nodes: Array<{ __typename?: 'Category', name?: string | null }> } | null } | null };
 
 export type GetPostsFromCategorQueryVariables = Exact<{
   categoryId: Scalars['Int']['input'];
@@ -36736,9 +37001,8 @@ export type GetProductsKrakowSlugsQuery = { __typename?: 'RootQuery', products?:
 
 
 export const GetHeaderMenuDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetHeaderMenu"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"acfSiteSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"acfHeaderMenu"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"menuItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"hasChildItems"}},{"kind":"Field","name":{"kind":"Name","value":"link"}},{"kind":"Field","name":{"kind":"Name","value":"childMenuItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetHeaderMenuQuery, GetHeaderMenuQueryVariables>;
-export const GetPostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getPosts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"categories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"categoryId"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"excerpt"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"mediaDetails"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sizes"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"include"},"value":{"kind":"EnumValue","value":"MEDIUM_LARGE"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPostsQuery, GetPostsQueryVariables>;
-export const GetPostsSlugsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getPostsSlugs"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>;
-export const GetPostDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getPost"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"post"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"date"}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"firstName"}},{"kind":"Field","name":{"kind":"Name","value":"lastName"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPostQuery, GetPostQueryVariables>;
+export const GetPostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getPosts"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"first"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"after"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"first"},"value":{"kind":"Variable","name":{"kind":"Name","value":"first"}}},{"kind":"Argument","name":{"kind":"Name","value":"after"},"value":{"kind":"Variable","name":{"kind":"Name","value":"after"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pageInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"hasNextPage"}},{"kind":"Field","name":{"kind":"Name","value":"endCursor"}},{"kind":"Field","name":{"kind":"Name","value":"total"}}]}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"categories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"categoryId"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"excerpt"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"mediaDetails"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sizes"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"include"},"value":{"kind":"EnumValue","value":"MEDIUM_LARGE"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"date"}}]}}]}}]}}]} as unknown as DocumentNode<GetPostsQuery, GetPostsQueryVariables>;
+export const GetPostDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getPost"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"post"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"date"}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"firstName"}},{"kind":"Field","name":{"kind":"Name","value":"lastName"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"categories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPostQuery, GetPostQueryVariables>;
 export const GetPostsFromCategorDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getPostsFromCategor"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"categoryId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Int"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"categoryId"},"value":{"kind":"Variable","name":{"kind":"Name","value":"categoryId"}}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"categories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"categoryId"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"excerpt"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"mediaDetails"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sizes"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"include"},"value":{"kind":"EnumValue","value":"MEDIUM_LARGE"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPostsFromCategorQuery, GetPostsFromCategorQueryVariables>;
 export const GetLadiesProductCategoryDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetLadiesProductCategory"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"krakow"},"name":{"kind":"Name","value":"productCategory"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}},{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"StringValue","value":"ladies-style-krakow","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"parent"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"count"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"warsaw"},"name":{"kind":"Name","value":"productCategory"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}},{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"StringValue","value":"ladies-style-warsaw","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"parent"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"count"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}}]}}]}}]}}]} as unknown as DocumentNode<GetLadiesProductCategoryQuery, GetLadiesProductCategoryQueryVariables>;
 export const GetMensProductCategoryDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetMensProductCategory"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"krakow"},"name":{"kind":"Name","value":"productCategory"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}},{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"StringValue","value":"mens-adventure-krakow","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"parent"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"count"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"warsaw"},"name":{"kind":"Name","value":"productCategory"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}},{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"StringValue","value":"mens-adventure-warsaw","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"parent"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"count"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"mediaItemUrl"}}]}}]}}]}}]} as unknown as DocumentNode<GetMensProductCategoryQuery, GetMensProductCategoryQueryVariables>;
@@ -37311,6 +37575,7 @@ export type CartItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Error that occurred when adding an item to the cart. */
@@ -37510,6 +37775,7 @@ export type CartToCartItemConnectionPageInfo = CartItemConnectionPageInfo & Page
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CartToCartItemConnection connection */
@@ -37679,6 +37945,7 @@ export type CategoryConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -37728,6 +37995,7 @@ export type CategoryToAncestorsCategoryConnectionPageInfo = CategoryConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Category type and the category type */
@@ -37763,6 +38031,7 @@ export type CategoryToCategoryConnectionPageInfo = CategoryConnectionPageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CategoryToCategoryConnection connection */
@@ -37844,6 +38113,7 @@ export type CategoryToContentNodeConnectionPageInfo = ContentNodeConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CategoryToContentNodeConnection connection */
@@ -37928,6 +38198,7 @@ export type CategoryToPostConnectionPageInfo = PageInfo & PostConnectionPageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CategoryToPostConnection connection */
@@ -38184,6 +38455,7 @@ export type CommentConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single comment node. Default is "ID". To be used along with the "id" field. */
@@ -38239,6 +38511,7 @@ export type CommentToCommentConnectionPageInfo = CommentConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CommentToCommentConnection connection */
@@ -38576,6 +38849,7 @@ export type ContentNodeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -38650,6 +38924,7 @@ export type ContentNodeToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the ContentNode type and the EnqueuedStylesheet type */
@@ -38685,6 +38960,7 @@ export type ContentNodeToEnqueuedStylesheetConnectionPageInfo = EnqueuedStyleshe
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The template assigned to a node of content */
@@ -38813,6 +39089,7 @@ export type ContentTypeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Allowed Content Types */
@@ -38868,6 +39145,7 @@ export type ContentTypeToContentNodeConnectionPageInfo = ContentNodeConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ContentTypeToContentNodeConnection connection */
@@ -38943,6 +39221,7 @@ export type ContentTypeToTaxonomyConnectionPageInfo = PageInfo & TaxonomyConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Allowed Content Types of the Category taxonomy. */
@@ -39485,6 +39764,7 @@ export type CouponConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Coupon. Default is ID. */
@@ -39556,6 +39836,7 @@ export type CouponLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Coupon type and the Customer type */
@@ -39591,6 +39872,7 @@ export type CouponToCustomerConnectionPageInfo = CustomerConnectionPageInfo & Pa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToCustomerConnection connection */
@@ -39642,6 +39924,7 @@ export type CouponToExcludedProductCategoriesConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToExcludedProductCategoriesConnection connection */
@@ -39723,6 +40006,7 @@ export type CouponToExcludedProductsConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToExcludedProductsConnection connection */
@@ -39836,6 +40120,7 @@ export type CouponToProductCategoryConnectionPageInfo = PageInfo & ProductCatego
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToProductCategoryConnection connection */
@@ -39917,6 +40202,7 @@ export type CouponToProductConnectionPageInfo = PageInfo & ProductConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CouponToProductConnection connection */
@@ -41143,6 +41429,7 @@ export type CustomerConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Customer type and the DownloadableItem type */
@@ -41178,6 +41465,7 @@ export type CustomerToDownloadableItemConnectionPageInfo = DownloadableItemConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CustomerToDownloadableItemConnection connection */
@@ -41223,6 +41511,7 @@ export type CustomerToOrderConnectionPageInfo = OrderConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CustomerToOrderConnection connection */
@@ -41286,6 +41575,7 @@ export type CustomerToRefundConnectionPageInfo = PageInfo & RefundConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the CustomerToRefundConnection connection */
@@ -42109,6 +42399,7 @@ export type DownloadableItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Relational context between connected nodes */
@@ -42230,6 +42521,7 @@ export type EnqueuedScriptConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Stylesheet enqueued by the CMS */
@@ -42305,6 +42597,7 @@ export type EnqueuedStylesheetConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** A external product object */
@@ -42937,6 +43230,7 @@ export type ExternalProductToVariationAttributeConnectionPageInfo = PageInfo & V
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** a fee line object */
@@ -43004,6 +43298,7 @@ export type FeeLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Fee line data. */
@@ -43136,6 +43431,7 @@ export type GlobalProductAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the GlobalProductAttribute type and the TermNode type */
@@ -43171,6 +43467,7 @@ export type GlobalProductAttributeToTermNodeConnectionPageInfo = PageInfo & Term
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the GlobalProductAttributeToTermNodeConnection connection */
@@ -43835,6 +44132,7 @@ export type GroupProductToProductConnectionPageInfo = PageInfo & ProductConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the GroupProductToProductConnection connection */
@@ -43948,6 +44246,7 @@ export type GroupProductToVariationAttributeConnectionPageInfo = PageInfo & Vari
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Content node with hierarchical (parent/child) relationships */
@@ -44095,6 +44394,7 @@ export type HierarchicalContentNodeToContentNodeAncestorsConnectionPageInfo = Co
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the HierarchicalContentNodeToContentNodeAncestorsConnection connection */
@@ -44170,6 +44470,7 @@ export type HierarchicalContentNodeToContentNodeChildrenConnectionPageInfo = Con
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the HierarchicalContentNodeToContentNodeChildrenConnection connection */
@@ -44399,6 +44700,7 @@ export type LineItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Meta data. */
@@ -44574,6 +44876,7 @@ export type LocalProductAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Product manage stock enumeration */
@@ -44845,6 +45148,7 @@ export type MediaItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -44959,6 +45263,7 @@ export type MediaItemToCommentConnectionPageInfo = CommentConnectionPageInfo & P
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the MediaItemToCommentConnection connection */
@@ -45108,6 +45413,7 @@ export type MenuConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Navigation menu items are the individual items assigned to a menu. These are rendered as the links in a navigation menu. */
@@ -45203,6 +45509,7 @@ export type MenuItemConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Nodes that can be linked to as Menu Items */
@@ -45286,6 +45593,7 @@ export type MenuItemToMenuItemConnectionPageInfo = MenuItemConnectionPageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the MenuItemToMenuItemConnection connection */
@@ -45372,6 +45680,7 @@ export type MenuToMenuItemConnectionPageInfo = MenuItemConnectionPageInfo & Page
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the MenuToMenuItemConnection connection */
@@ -46014,6 +46323,7 @@ export type OrderConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The cardinality of the connection order */
@@ -46106,6 +46416,7 @@ export type OrderToCommentConnectionPageInfo = CommentConnectionPageInfo & PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the OrderToCommentConnection connection */
@@ -46203,6 +46514,7 @@ export type OrderToCouponLineConnectionPageInfo = CouponLineConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the DownloadableItem type */
@@ -46238,6 +46550,7 @@ export type OrderToDownloadableItemConnectionPageInfo = DownloadableItemConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the OrderToDownloadableItemConnection connection */
@@ -46283,6 +46596,7 @@ export type OrderToFeeLineConnectionPageInfo = FeeLineConnectionPageInfo & PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the LineItem type */
@@ -46318,6 +46632,7 @@ export type OrderToLineItemConnectionPageInfo = LineItemConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the Refund type */
@@ -46353,6 +46668,7 @@ export type OrderToRefundConnectionPageInfo = PageInfo & RefundConnectionPageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the OrderToRefundConnection connection */
@@ -46412,6 +46728,7 @@ export type OrderToShippingLineConnectionPageInfo = PageInfo & ShippingLineConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Order type and the TaxLine type */
@@ -46447,6 +46764,7 @@ export type OrderToTaxLineConnectionPageInfo = PageInfo & TaxLineConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Fields to order the Orders connection by */
@@ -46621,6 +46939,7 @@ export type PaBungeeJumpOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -46670,6 +46989,7 @@ export type PaBungeeJumpOptionKrakowToContentNodeConnectionPageInfo = ContentNod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaBungeeJumpOptionKrakowToContentNodeConnection connection */
@@ -46745,6 +47065,7 @@ export type PaBungeeJumpOptionKrakowToProductConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaBungeeJumpOptionKrakowToProductConnection connection */
@@ -46858,6 +47179,7 @@ export type PaBungeeJumpOptionKrakowToProductVariationConnectionPageInfo = PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaBungeeJumpOptionKrakowToProductVariationConnection connection */
@@ -47083,6 +47405,7 @@ export type PaGoKartingOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -47132,6 +47455,7 @@ export type PaGoKartingOptionKrakowToContentNodeConnectionPageInfo = ContentNode
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGoKartingOptionKrakowToContentNodeConnection connection */
@@ -47207,6 +47531,7 @@ export type PaGoKartingOptionKrakowToProductConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGoKartingOptionKrakowToProductConnection connection */
@@ -47320,6 +47645,7 @@ export type PaGoKartingOptionKrakowToProductVariationConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGoKartingOptionKrakowToProductVariationConnection connection */
@@ -47545,6 +47871,7 @@ export type PaGroupSizeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -47594,6 +47921,7 @@ export type PaGroupSizeToContentNodeConnectionPageInfo = ContentNodeConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGroupSizeToContentNodeConnection connection */
@@ -47669,6 +47997,7 @@ export type PaGroupSizeToProductConnectionPageInfo = PageInfo & ProductConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGroupSizeToProductConnection connection */
@@ -47782,6 +48111,7 @@ export type PaGroupSizeToProductVariationConnectionPageInfo = PageInfo & Product
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaGroupSizeToProductVariationConnection connection */
@@ -48007,6 +48337,7 @@ export type PaKatowiceAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -48056,6 +48387,7 @@ export type PaKatowiceAirportToContentNodeConnectionPageInfo = ContentNodeConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKatowiceAirportToContentNodeConnection connection */
@@ -48131,6 +48463,7 @@ export type PaKatowiceAirportToProductConnectionPageInfo = PageInfo & ProductCon
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKatowiceAirportToProductConnection connection */
@@ -48244,6 +48577,7 @@ export type PaKatowiceAirportToProductVariationConnectionPageInfo = PageInfo & P
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKatowiceAirportToProductVariationConnection connection */
@@ -48469,6 +48803,7 @@ export type PaKrakowAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -48518,6 +48853,7 @@ export type PaKrakowAirportToContentNodeConnectionPageInfo = ContentNodeConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKrakowAirportToContentNodeConnection connection */
@@ -48593,6 +48929,7 @@ export type PaKrakowAirportToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKrakowAirportToProductConnection connection */
@@ -48706,6 +49043,7 @@ export type PaKrakowAirportToProductVariationConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaKrakowAirportToProductVariationConnection connection */
@@ -48931,6 +49269,7 @@ export type PaOffRoadOptionConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -48980,6 +49319,7 @@ export type PaOffRoadOptionToContentNodeConnectionPageInfo = ContentNodeConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaOffRoadOptionToContentNodeConnection connection */
@@ -49055,6 +49395,7 @@ export type PaOffRoadOptionToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaOffRoadOptionToProductConnection connection */
@@ -49168,6 +49509,7 @@ export type PaOffRoadOptionToProductVariationConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaOffRoadOptionToProductVariationConnection connection */
@@ -49393,6 +49735,7 @@ export type PaPaintballOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -49442,6 +49785,7 @@ export type PaPaintballOptionKrakowToContentNodeConnectionPageInfo = ContentNode
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionKrakowToContentNodeConnection connection */
@@ -49517,6 +49861,7 @@ export type PaPaintballOptionKrakowToProductConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionKrakowToProductConnection connection */
@@ -49630,6 +49975,7 @@ export type PaPaintballOptionKrakowToProductVariationConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionKrakowToProductVariationConnection connection */
@@ -49855,6 +50201,7 @@ export type PaPaintballOptionWarsawConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -49904,6 +50251,7 @@ export type PaPaintballOptionWarsawToContentNodeConnectionPageInfo = ContentNode
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionWarsawToContentNodeConnection connection */
@@ -49979,6 +50327,7 @@ export type PaPaintballOptionWarsawToProductConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionWarsawToProductConnection connection */
@@ -50092,6 +50441,7 @@ export type PaPaintballOptionWarsawToProductVariationConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPaintballOptionWarsawToProductVariationConnection connection */
@@ -50317,6 +50667,7 @@ export type PaPigeonsOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -50366,6 +50717,7 @@ export type PaPigeonsOptionKrakowToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionKrakowToContentNodeConnection connection */
@@ -50441,6 +50793,7 @@ export type PaPigeonsOptionKrakowToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionKrakowToProductConnection connection */
@@ -50554,6 +50907,7 @@ export type PaPigeonsOptionKrakowToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionKrakowToProductVariationConnection connection */
@@ -50779,6 +51133,7 @@ export type PaPigeonsOptionWarsawConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -50828,6 +51183,7 @@ export type PaPigeonsOptionWarsawToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionWarsawToContentNodeConnection connection */
@@ -50903,6 +51259,7 @@ export type PaPigeonsOptionWarsawToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionWarsawToProductConnection connection */
@@ -51016,6 +51373,7 @@ export type PaPigeonsOptionWarsawToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaPigeonsOptionWarsawToProductVariationConnection connection */
@@ -51241,6 +51599,7 @@ export type PaQuadBikingOptionConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -51290,6 +51649,7 @@ export type PaQuadBikingOptionToContentNodeConnectionPageInfo = ContentNodeConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaQuadBikingOptionToContentNodeConnection connection */
@@ -51365,6 +51725,7 @@ export type PaQuadBikingOptionToProductConnectionPageInfo = PageInfo & ProductCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaQuadBikingOptionToProductConnection connection */
@@ -51478,6 +51839,7 @@ export type PaQuadBikingOptionToProductVariationConnectionPageInfo = PageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaQuadBikingOptionToProductVariationConnection connection */
@@ -51703,6 +52065,7 @@ export type PaShootingOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -51752,6 +52115,7 @@ export type PaShootingOptionKrakowToContentNodeConnectionPageInfo = ContentNodeC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionKrakowToContentNodeConnection connection */
@@ -51827,6 +52191,7 @@ export type PaShootingOptionKrakowToProductConnectionPageInfo = PageInfo & Produ
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionKrakowToProductConnection connection */
@@ -51940,6 +52305,7 @@ export type PaShootingOptionKrakowToProductVariationConnectionPageInfo = PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionKrakowToProductVariationConnection connection */
@@ -52165,6 +52531,7 @@ export type PaShootingOptionWarsawConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -52214,6 +52581,7 @@ export type PaShootingOptionWarsawToContentNodeConnectionPageInfo = ContentNodeC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionWarsawToContentNodeConnection connection */
@@ -52289,6 +52657,7 @@ export type PaShootingOptionWarsawToProductConnectionPageInfo = PageInfo & Produ
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionWarsawToProductConnection connection */
@@ -52402,6 +52771,7 @@ export type PaShootingOptionWarsawToProductVariationConnectionPageInfo = PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaShootingOptionWarsawToProductVariationConnection connection */
@@ -52627,6 +52997,7 @@ export type PaWarsawChopinAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -52676,6 +53047,7 @@ export type PaWarsawChopinAirportToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawChopinAirportToContentNodeConnection connection */
@@ -52751,6 +53123,7 @@ export type PaWarsawChopinAirportToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawChopinAirportToProductConnection connection */
@@ -52864,6 +53237,7 @@ export type PaWarsawChopinAirportToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawChopinAirportToProductVariationConnection connection */
@@ -53089,6 +53463,7 @@ export type PaWarsawModlinAirportConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -53138,6 +53513,7 @@ export type PaWarsawModlinAirportToContentNodeConnectionPageInfo = ContentNodeCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawModlinAirportToContentNodeConnection connection */
@@ -53213,6 +53589,7 @@ export type PaWarsawModlinAirportToProductConnectionPageInfo = PageInfo & Produc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawModlinAirportToProductConnection connection */
@@ -53326,6 +53703,7 @@ export type PaWarsawModlinAirportToProductVariationConnectionPageInfo = PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWarsawModlinAirportToProductVariationConnection connection */
@@ -53551,6 +53929,7 @@ export type PaWhiskyOptionKrakowConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -53600,6 +53979,7 @@ export type PaWhiskyOptionKrakowToContentNodeConnectionPageInfo = ContentNodeCon
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWhiskyOptionKrakowToContentNodeConnection connection */
@@ -53675,6 +54055,7 @@ export type PaWhiskyOptionKrakowToProductConnectionPageInfo = PageInfo & Product
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWhiskyOptionKrakowToProductConnection connection */
@@ -53788,6 +54169,7 @@ export type PaWhiskyOptionKrakowToProductVariationConnectionPageInfo = PageInfo 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PaWhiskyOptionKrakowToProductVariationConnection connection */
@@ -54105,6 +54487,7 @@ export type PageConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -54162,6 +54545,7 @@ export type PageToCommentConnectionPageInfo = CommentConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PageToCommentConnection connection */
@@ -54268,6 +54652,7 @@ export type PageToRevisionConnectionPageInfo = PageConnectionPageInfo & PageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PageToRevisionConnection connection */
@@ -54359,6 +54744,7 @@ export type PaymentGatewayConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** An plugin object */
@@ -54414,6 +54800,7 @@ export type PluginConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The status of the WordPress plugin. */
@@ -54702,6 +55089,7 @@ export type PostConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The postFormat type */
@@ -54828,6 +55216,7 @@ export type PostFormatConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -54877,6 +55266,7 @@ export type PostFormatToContentNodeConnectionPageInfo = ContentNodeConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostFormatToContentNodeConnection connection */
@@ -54952,6 +55342,7 @@ export type PostFormatToPostConnectionPageInfo = PageInfo & PostConnectionPageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostFormatToPostConnection connection */
@@ -55212,6 +55603,7 @@ export type PostToCategoryConnectionPageInfo = CategoryConnectionPageInfo & Page
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToCategoryConnection connection */
@@ -55293,6 +55685,7 @@ export type PostToCommentConnectionPageInfo = CommentConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToCommentConnection connection */
@@ -55392,6 +55785,7 @@ export type PostToPostFormatConnectionPageInfo = PageInfo & PostFormatConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToPostFormatConnection connection */
@@ -55482,6 +55876,7 @@ export type PostToRevisionConnectionPageInfo = PageInfo & PostConnectionPageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToRevisionConnection connection */
@@ -55585,6 +55980,7 @@ export type PostToTagConnectionPageInfo = PageInfo & TagConnectionPageInfo & WpP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToTagConnection connection */
@@ -55666,6 +56062,7 @@ export type PostToTermNodeConnectionPageInfo = PageInfo & TermNodeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the PostToTermNodeConnection connection */
@@ -56765,6 +57162,7 @@ export type ProductAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Options for ordering the connection */
@@ -56953,6 +57351,7 @@ export type ProductCategoryConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Product category display type enumeration */
@@ -57014,6 +57413,7 @@ export type ProductCategoryToAncestorsProductCategoryConnectionPageInfo = PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the ProductCategory type and the ContentNode type */
@@ -57049,6 +57449,7 @@ export type ProductCategoryToContentNodeConnectionPageInfo = ContentNodeConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductCategoryToContentNodeConnection connection */
@@ -57133,6 +57534,7 @@ export type ProductCategoryToProductCategoryConnectionPageInfo = PageInfo & Prod
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductCategoryToProductCategoryConnection connection */
@@ -57214,6 +57616,7 @@ export type ProductCategoryToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductCategoryToProductConnection connection */
@@ -57344,6 +57747,7 @@ export type ProductConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The &quot;ProductDetails&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -57610,6 +58014,7 @@ export type ProductTagConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -57659,6 +58064,7 @@ export type ProductTagToContentNodeConnectionPageInfo = ContentNodeConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTagToContentNodeConnection connection */
@@ -57734,6 +58140,7 @@ export type ProductTagToProductConnectionPageInfo = PageInfo & ProductConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTagToProductConnection connection */
@@ -57905,6 +58312,7 @@ export type ProductToCommentConnectionPageInfo = CommentConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToCommentConnection connection */
@@ -58002,6 +58410,7 @@ export type ProductToCommentsConnectionPageInfo = CommentConnectionPageInfo & Pa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToCommentsConnection connection */
@@ -58099,6 +58508,7 @@ export type ProductToGlobalProductAttributeConnectionPageInfo = GlobalProductAtt
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToGlobalProductAttributeConnection connection */
@@ -58140,6 +58550,7 @@ export type ProductToLocalProductAttributeConnectionPageInfo = LocalProductAttri
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToLocalProductAttributeConnection connection */
@@ -58181,6 +58592,7 @@ export type ProductToMediaItemConnectionPageInfo = MediaItemConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToMediaItemConnection connection */
@@ -58264,6 +58676,7 @@ export type ProductToPaBungeeJumpOptionKrakowConnectionPageInfo = PaBungeeJumpOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaBungeeJumpOptionKrakowConnection connection */
@@ -58347,6 +58760,7 @@ export type ProductToPaGoKartingOptionKrakowConnectionPageInfo = PaGoKartingOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaGoKartingOptionKrakowConnection connection */
@@ -58430,6 +58844,7 @@ export type ProductToPaGroupSizeConnectionPageInfo = PaGroupSizeConnectionPageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaGroupSizeConnection connection */
@@ -58513,6 +58928,7 @@ export type ProductToPaKatowiceAirportConnectionPageInfo = PaKatowiceAirportConn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaKatowiceAirportConnection connection */
@@ -58596,6 +59012,7 @@ export type ProductToPaKrakowAirportConnectionPageInfo = PaKrakowAirportConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaKrakowAirportConnection connection */
@@ -58679,6 +59096,7 @@ export type ProductToPaOffRoadOptionConnectionPageInfo = PaOffRoadOptionConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaOffRoadOptionConnection connection */
@@ -58762,6 +59180,7 @@ export type ProductToPaPaintballOptionKrakowConnectionPageInfo = PaPaintballOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPaintballOptionKrakowConnection connection */
@@ -58845,6 +59264,7 @@ export type ProductToPaPaintballOptionWarsawConnectionPageInfo = PaPaintballOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPaintballOptionWarsawConnection connection */
@@ -58928,6 +59348,7 @@ export type ProductToPaPigeonsOptionKrakowConnectionPageInfo = PaPigeonsOptionKr
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPigeonsOptionKrakowConnection connection */
@@ -59011,6 +59432,7 @@ export type ProductToPaPigeonsOptionWarsawConnectionPageInfo = PaPigeonsOptionWa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaPigeonsOptionWarsawConnection connection */
@@ -59094,6 +59516,7 @@ export type ProductToPaQuadBikingOptionConnectionPageInfo = PaQuadBikingOptionCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaQuadBikingOptionConnection connection */
@@ -59177,6 +59600,7 @@ export type ProductToPaShootingOptionKrakowConnectionPageInfo = PaShootingOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaShootingOptionKrakowConnection connection */
@@ -59260,6 +59684,7 @@ export type ProductToPaShootingOptionWarsawConnectionPageInfo = PaShootingOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaShootingOptionWarsawConnection connection */
@@ -59343,6 +59768,7 @@ export type ProductToPaWarsawChopinAirportConnectionPageInfo = PaWarsawChopinAir
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaWarsawChopinAirportConnection connection */
@@ -59426,6 +59852,7 @@ export type ProductToPaWarsawModlinAirportConnectionPageInfo = PaWarsawModlinAir
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaWarsawModlinAirportConnection connection */
@@ -59509,6 +59936,7 @@ export type ProductToPaWhiskyOptionKrakowConnectionPageInfo = PaWhiskyOptionKrak
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToPaWhiskyOptionKrakowConnection connection */
@@ -59677,6 +60105,7 @@ export type ProductToProductAttributeConnectionPageInfo = PageInfo & ProductAttr
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductAttributeConnection connection */
@@ -59720,6 +60149,7 @@ export type ProductToProductCategoryConnectionPageInfo = PageInfo & ProductCateg
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductCategoryConnection connection */
@@ -59801,6 +60231,7 @@ export type ProductToProductConnectionPageInfo = PageInfo & ProductConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductConnection connection */
@@ -59916,6 +60347,7 @@ export type ProductToProductTagConnectionPageInfo = PageInfo & ProductTagConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductTagConnection connection */
@@ -59999,6 +60431,7 @@ export type ProductToProductTypeConnectionPageInfo = PageInfo & ProductTypeConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToProductTypeConnection connection */
@@ -60082,6 +60515,7 @@ export type ProductToShippingClassConnectionPageInfo = PageInfo & ShippingClassC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToShippingClassConnection connection */
@@ -60163,6 +60597,7 @@ export type ProductToTermNodeConnectionPageInfo = PageInfo & TermNodeConnectionP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToTermNodeConnection connection */
@@ -60246,6 +60681,7 @@ export type ProductToUpsellConnectionPageInfo = PageInfo & ProductConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToUpsellConnection connection */
@@ -60361,6 +60797,7 @@ export type ProductToVisibleProductConnectionPageInfo = PageInfo & VisibleProduc
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductToVisibleProductConnection connection */
@@ -60533,6 +60970,7 @@ export type ProductTypeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -60582,6 +61020,7 @@ export type ProductTypeToContentNodeConnectionPageInfo = ContentNodeConnectionPa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTypeToContentNodeConnection connection */
@@ -60657,6 +61096,7 @@ export type ProductTypeToProductConnectionPageInfo = PageInfo & ProductConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductTypeToProductConnection connection */
@@ -61010,6 +61450,7 @@ export type ProductVariationConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single ProductVariation. Default is ID. */
@@ -61053,6 +61494,7 @@ export type ProductVariationToShippingClassConnectionPageInfo = PageInfo & Shipp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductVariationToShippingClassConnection connection */
@@ -61143,6 +61585,7 @@ export type ProductVariationToVariationAttributeConnectionPageInfo = PageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the ProductVariation type and the visibleProduct type */
@@ -61178,6 +61621,7 @@ export type ProductVariationToVisibleProductConnectionPageInfo = PageInfo & Visi
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ProductVariationToVisibleProductConnection connection */
@@ -61358,6 +61802,7 @@ export type RefundConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Refund. Default is ID. */
@@ -63732,6 +64177,7 @@ export type RootQueryToCategoryConnectionPageInfo = CategoryConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCategoryConnection connection */
@@ -63813,6 +64259,7 @@ export type RootQueryToCommentConnectionPageInfo = CommentConnectionPageInfo & P
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCommentConnection connection */
@@ -63910,6 +64357,7 @@ export type RootQueryToContentNodeConnectionPageInfo = ContentNodeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToContentNodeConnection connection */
@@ -63985,6 +64433,7 @@ export type RootQueryToContentTypeConnectionPageInfo = ContentTypeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the Coupon type */
@@ -64020,6 +64469,7 @@ export type RootQueryToCouponConnectionPageInfo = CouponConnectionPageInfo & Pag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCouponConnection connection */
@@ -64077,6 +64527,7 @@ export type RootQueryToCustomerConnectionPageInfo = CustomerConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToCustomerConnection connection */
@@ -64128,6 +64579,7 @@ export type RootQueryToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnecti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the EnqueuedStylesheet type */
@@ -64163,6 +64615,7 @@ export type RootQueryToEnqueuedStylesheetConnectionPageInfo = EnqueuedStylesheet
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the mediaItem type */
@@ -64198,6 +64651,7 @@ export type RootQueryToMediaItemConnectionPageInfo = MediaItemConnectionPageInfo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToMediaItemConnection connection */
@@ -64279,6 +64733,7 @@ export type RootQueryToMenuConnectionPageInfo = MenuConnectionPageInfo & PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToMenuConnection connection */
@@ -64324,6 +64779,7 @@ export type RootQueryToMenuItemConnectionPageInfo = MenuItemConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToMenuItemConnection connection */
@@ -64371,6 +64827,7 @@ export type RootQueryToOrderConnectionPageInfo = OrderConnectionPageInfo & PageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToOrderConnection connection */
@@ -64434,6 +64891,7 @@ export type RootQueryToPaBungeeJumpOptionKrakowConnectionPageInfo = PaBungeeJump
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaBungeeJumpOptionKrakowConnection connection */
@@ -64515,6 +64973,7 @@ export type RootQueryToPaGoKartingOptionKrakowConnectionPageInfo = PaGoKartingOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaGoKartingOptionKrakowConnection connection */
@@ -64596,6 +65055,7 @@ export type RootQueryToPaGroupSizeConnectionPageInfo = PaGroupSizeConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaGroupSizeConnection connection */
@@ -64677,6 +65137,7 @@ export type RootQueryToPaKatowiceAirportConnectionPageInfo = PaKatowiceAirportCo
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaKatowiceAirportConnection connection */
@@ -64758,6 +65219,7 @@ export type RootQueryToPaKrakowAirportConnectionPageInfo = PaKrakowAirportConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaKrakowAirportConnection connection */
@@ -64839,6 +65301,7 @@ export type RootQueryToPaOffRoadOptionConnectionPageInfo = PaOffRoadOptionConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaOffRoadOptionConnection connection */
@@ -64920,6 +65383,7 @@ export type RootQueryToPaPaintballOptionKrakowConnectionPageInfo = PaPaintballOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPaintballOptionKrakowConnection connection */
@@ -65001,6 +65465,7 @@ export type RootQueryToPaPaintballOptionWarsawConnectionPageInfo = PaPaintballOp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPaintballOptionWarsawConnection connection */
@@ -65082,6 +65547,7 @@ export type RootQueryToPaPigeonsOptionKrakowConnectionPageInfo = PaPigeonsOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPigeonsOptionKrakowConnection connection */
@@ -65163,6 +65629,7 @@ export type RootQueryToPaPigeonsOptionWarsawConnectionPageInfo = PaPigeonsOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaPigeonsOptionWarsawConnection connection */
@@ -65244,6 +65711,7 @@ export type RootQueryToPaQuadBikingOptionConnectionPageInfo = PaQuadBikingOption
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaQuadBikingOptionConnection connection */
@@ -65325,6 +65793,7 @@ export type RootQueryToPaShootingOptionKrakowConnectionPageInfo = PaShootingOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaShootingOptionKrakowConnection connection */
@@ -65406,6 +65875,7 @@ export type RootQueryToPaShootingOptionWarsawConnectionPageInfo = PaShootingOpti
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaShootingOptionWarsawConnection connection */
@@ -65487,6 +65957,7 @@ export type RootQueryToPaWarsawChopinAirportConnectionPageInfo = PaWarsawChopinA
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaWarsawChopinAirportConnection connection */
@@ -65568,6 +66039,7 @@ export type RootQueryToPaWarsawModlinAirportConnectionPageInfo = PaWarsawModlinA
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaWarsawModlinAirportConnection connection */
@@ -65649,6 +66121,7 @@ export type RootQueryToPaWhiskyOptionKrakowConnectionPageInfo = PaWhiskyOptionKr
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaWhiskyOptionKrakowConnection connection */
@@ -65730,6 +66203,7 @@ export type RootQueryToPageConnectionPageInfo = PageConnectionPageInfo & PageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPageConnection connection */
@@ -65811,6 +66285,7 @@ export type RootQueryToPaymentGatewayConnectionPageInfo = PageInfo & PaymentGate
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPaymentGatewayConnection connection */
@@ -65852,6 +66327,7 @@ export type RootQueryToPluginConnectionPageInfo = PageInfo & PluginConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPluginConnection connection */
@@ -65897,6 +66373,7 @@ export type RootQueryToPostConnectionPageInfo = PageInfo & PostConnectionPageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPostConnection connection */
@@ -65998,6 +66475,7 @@ export type RootQueryToPostFormatConnectionPageInfo = PageInfo & PostFormatConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToPostFormatConnection connection */
@@ -66079,6 +66557,7 @@ export type RootQueryToProductCategoryConnectionPageInfo = PageInfo & ProductCat
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductCategoryConnection connection */
@@ -66160,6 +66639,7 @@ export type RootQueryToProductConnectionPageInfo = PageInfo & ProductConnectionP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductConnection connection */
@@ -66273,6 +66753,7 @@ export type RootQueryToProductTagConnectionPageInfo = PageInfo & ProductTagConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductTagConnection connection */
@@ -66354,6 +66835,7 @@ export type RootQueryToProductTypeConnectionPageInfo = PageInfo & ProductTypeCon
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToProductTypeConnection connection */
@@ -66435,6 +66917,7 @@ export type RootQueryToRefundConnectionPageInfo = PageInfo & RefundConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToRefundConnection connection */
@@ -66494,6 +66977,7 @@ export type RootQueryToRevisionsConnectionPageInfo = ContentNodeConnectionPageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToRevisionsConnection connection */
@@ -66569,6 +67053,7 @@ export type RootQueryToShippingClassConnectionPageInfo = PageInfo & ShippingClas
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToShippingClassConnection connection */
@@ -66650,6 +67135,7 @@ export type RootQueryToShippingMethodConnectionPageInfo = PageInfo & ShippingMet
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the tag type */
@@ -66685,6 +67171,7 @@ export type RootQueryToTagConnectionPageInfo = PageInfo & TagConnectionPageInfo 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToTagConnection connection */
@@ -66766,6 +67253,7 @@ export type RootQueryToTaxRateConnectionPageInfo = PageInfo & TaxRateConnectionP
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToTaxRateConnection connection */
@@ -66813,6 +67301,7 @@ export type RootQueryToTaxonomyConnectionPageInfo = PageInfo & TaxonomyConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the TermNode type */
@@ -66848,6 +67337,7 @@ export type RootQueryToTermNodeConnectionPageInfo = PageInfo & TermNodeConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToTermNodeConnection connection */
@@ -66931,6 +67421,7 @@ export type RootQueryToThemeConnectionPageInfo = PageInfo & ThemeConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the User type */
@@ -66966,6 +67457,7 @@ export type RootQueryToUserConnectionPageInfo = PageInfo & UserConnectionPageInf
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToUserConnection connection */
@@ -67035,6 +67527,7 @@ export type RootQueryToUserRoleConnectionPageInfo = PageInfo & UserRoleConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the RootQuery type and the visibleProduct type */
@@ -67070,6 +67563,7 @@ export type RootQueryToVisibleProductConnectionPageInfo = PageInfo & VisibleProd
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the RootQueryToVisibleProductConnection connection */
@@ -67605,6 +68099,7 @@ export type ShippingClassConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -67654,6 +68149,7 @@ export type ShippingClassToContentNodeConnectionPageInfo = ContentNodeConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ShippingClassToContentNodeConnection connection */
@@ -67729,6 +68225,7 @@ export type ShippingClassToProductConnectionPageInfo = PageInfo & ProductConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the ShippingClassToProductConnection connection */
@@ -67881,6 +68378,7 @@ export type ShippingLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Shipping lines data. */
@@ -67942,6 +68440,7 @@ export type ShippingMethodConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Shipping Method. Default is ID. */
@@ -68663,6 +69162,7 @@ export type SimpleProductToProductConnectionPageInfo = PageInfo & ProductConnect
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the SimpleProductToProductConnection connection */
@@ -68776,6 +69276,7 @@ export type SimpleProductToVariationAttributeConnectionPageInfo = PageInfo & Var
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Product stock status enumeration */
@@ -68909,6 +69410,7 @@ export type TagConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -68958,6 +69460,7 @@ export type TagToContentNodeConnectionPageInfo = ContentNodeConnectionPageInfo &
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the TagToContentNodeConnection connection */
@@ -69033,6 +69536,7 @@ export type TagToPostConnectionPageInfo = PageInfo & PostConnectionPageInfo & Wp
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the TagToPostConnection connection */
@@ -69183,6 +69687,7 @@ export type TaxLineConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** A Tax rate object */
@@ -69258,6 +69763,7 @@ export type TaxRateConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single Tax rate. Default is ID. */
@@ -69370,6 +69876,7 @@ export type TaxonomyConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Allowed taxonomies */
@@ -69502,6 +70009,7 @@ export type TaxonomyToContentTypeConnectionPageInfo = ContentTypeConnectionPageI
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the Taxonomy type and the TermNode type */
@@ -69537,6 +70045,7 @@ export type TaxonomyToTermNodeConnectionPageInfo = PageInfo & TermNodeConnection
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The template assigned to the node */
@@ -69748,6 +70257,7 @@ export type TermNodeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is "ID". To be used along with the "id" field. */
@@ -69797,6 +70307,7 @@ export type TermNodeToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the TermNode type and the EnqueuedStylesheet type */
@@ -69832,6 +70343,7 @@ export type TermNodeToEnqueuedStylesheetConnectionPageInfo = EnqueuedStylesheetC
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Options for ordering the connection by */
@@ -69909,6 +70421,7 @@ export type ThemeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Any node that has a URI */
@@ -71329,6 +71842,7 @@ export type UserConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single User node. To be used along with the "id" field. Default is "ID". */
@@ -71392,6 +71906,7 @@ export type UserRoleConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Names of available user roles */
@@ -71461,6 +71976,7 @@ export type UserToCommentConnectionPageInfo = CommentConnectionPageInfo & PageIn
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToCommentConnection connection */
@@ -71558,6 +72074,7 @@ export type UserToEnqueuedScriptConnectionPageInfo = EnqueuedScriptConnectionPag
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the User type and the EnqueuedStylesheet type */
@@ -71593,6 +72110,7 @@ export type UserToEnqueuedStylesheetConnectionPageInfo = EnqueuedStylesheetConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Connection between the User type and the mediaItem type */
@@ -71628,6 +72146,7 @@ export type UserToMediaItemConnectionPageInfo = MediaItemConnectionPageInfo & Pa
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToMediaItemConnection connection */
@@ -71709,6 +72228,7 @@ export type UserToPageConnectionPageInfo = PageConnectionPageInfo & PageInfo & W
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToPageConnection connection */
@@ -71790,6 +72310,7 @@ export type UserToPostConnectionPageInfo = PageInfo & PostConnectionPageInfo & W
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToPostConnection connection */
@@ -71891,6 +72412,7 @@ export type UserToRevisionsConnectionPageInfo = ContentNodeConnectionPageInfo & 
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the UserToRevisionsConnection connection */
@@ -71966,6 +72488,7 @@ export type UserToUserRoleConnectionPageInfo = PageInfo & UserRoleConnectionPage
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Field to order the connection by */
@@ -72694,6 +73217,7 @@ export type VariableProductToProductConnectionPageInfo = PageInfo & ProductConne
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VariableProductToProductConnection connection */
@@ -72807,6 +73331,7 @@ export type VariableProductToProductVariationConnectionPageInfo = PageInfo & Pro
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VariableProductToProductVariationConnection connection */
@@ -72920,6 +73445,7 @@ export type VariableProductToVariationAttributeConnectionPageInfo = PageInfo & V
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** A product variation attribute object */
@@ -72967,6 +73493,7 @@ export type VariationAttributeConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The visibleProduct type */
@@ -73093,6 +73620,7 @@ export type VisibleProductConnectionPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -73142,6 +73670,7 @@ export type VisibleProductToContentNodeConnectionPageInfo = ContentNodeConnectio
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VisibleProductToContentNodeConnection connection */
@@ -73217,6 +73746,7 @@ export type VisibleProductToProductConnectionPageInfo = PageInfo & ProductConnec
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Arguments for filtering the VisibleProductToProductConnection connection */
@@ -73318,6 +73848,7 @@ export type WpPageInfo = {
   seo?: Maybe<SeoPostTypePageInfo>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
+  total?: Maybe<Scalars['Int']['output']>;
 };
 
 /** Provides access to fields of the &quot;AcfHeaderMenu&quot; ACF Field Group via the &quot;acfHeaderMenu&quot; field */
@@ -73402,22 +73933,20 @@ export type GetHeaderMenuQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetHeaderMenuQuery = { __typename?: 'RootQuery', acfSiteSettings?: { __typename?: 'AcfSiteSettings', acfHeaderMenu?: { __typename?: 'AcfHeaderMenu', logo?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', mediaItemUrl?: string | null } } | null, menuItems?: Array<{ __typename?: 'AcfHeaderMenuMenuItems', label?: string | null, hasChildItems?: boolean | null, link?: string | null, childMenuItems?: Array<{ __typename?: 'AcfHeaderMenuMenuItemsChildMenuItems', label?: string | null, link?: string | null } | null> | null } | null> | null } | null } | null };
 
-export type GetPostsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetPostsQueryVariables = Exact<{
+  first?: InputMaybe<Scalars['Int']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+}>;
 
 
-export type GetPostsQuery = { __typename?: 'RootQuery', posts?: { __typename?: 'RootQueryToPostConnection', nodes: Array<{ __typename?: 'Post', title?: string | null, excerpt?: string | null, slug?: string | null, categories?: { __typename?: 'PostToCategoryConnection', nodes: Array<{ __typename?: 'Category', name?: string | null, categoryId?: number | null, slug?: string | null }> } | null, featuredImage?: { __typename?: 'NodeWithFeaturedImageToMediaItemConnectionEdge', node: { __typename?: 'MediaItem', mediaItemUrl?: string | null, altText?: string | null, mediaDetails?: { __typename?: 'MediaDetails', sizes?: Array<{ __typename?: 'MediaSize', height?: string | null, width?: string | null, name?: string | null } | null> | null } | null } } | null }> } | null };
-
-export type GetPostsSlugsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type GetPostsSlugsQuery = { __typename?: 'RootQuery', posts?: { __typename?: 'RootQueryToPostConnection', edges: Array<{ __typename?: 'RootQueryToPostConnectionEdge', node: { __typename?: 'Post', slug?: string | null } }> } | null };
+export type GetPostsQuery = { __typename?: 'RootQuery', posts?: { __typename?: 'RootQueryToPostConnection', pageInfo: { __typename?: 'RootQueryToPostConnectionPageInfo', hasNextPage: boolean, endCursor?: string | null, total?: number | null }, nodes: Array<{ __typename?: 'Post', id: string, title?: string | null, excerpt?: string | null, slug?: string | null, date?: string | null, categories?: { __typename?: 'PostToCategoryConnection', nodes: Array<{ __typename?: 'Category', name?: string | null, categoryId?: number | null, slug?: string | null }> } | null, featuredImage?: { __typename?: 'NodeWithFeaturedImageToMediaItemConnectionEdge', node: { __typename?: 'MediaItem', mediaItemUrl?: string | null, altText?: string | null, mediaDetails?: { __typename?: 'MediaDetails', sizes?: Array<{ __typename?: 'MediaSize', height?: string | null, width?: string | null, name?: string | null } | null> | null } | null } } | null }> } | null };
 
 export type GetPostQueryVariables = Exact<{
   id: Scalars['ID']['input'];
 }>;
 
 
-export type GetPostQuery = { __typename?: 'RootQuery', post?: { __typename?: 'Post', title?: string | null, content?: string | null, date?: string | null, author?: { __typename?: 'NodeWithAuthorToUserConnectionEdge', node: { __typename?: 'User', firstName?: string | null, lastName?: string | null } } | null } | null };
+export type GetPostQuery = { __typename?: 'RootQuery', post?: { __typename?: 'Post', title?: string | null, content?: string | null, date?: string | null, author?: { __typename?: 'NodeWithAuthorToUserConnectionEdge', node: { __typename?: 'User', firstName?: string | null, lastName?: string | null } } | null, categories?: { __typename?: 'PostToCategoryConnection', nodes: Array<{ __typename?: 'Category', name?: string | null }> } | null } | null };
 
 export type GetPostsFromCategorQueryVariables = Exact<{
   categoryId: Scalars['Int']['input'];
@@ -73528,9 +74057,15 @@ export type GetHeaderMenuLazyQueryHookResult = ReturnType<typeof useGetHeaderMen
 export type GetHeaderMenuSuspenseQueryHookResult = ReturnType<typeof useGetHeaderMenuSuspenseQuery>;
 export type GetHeaderMenuQueryResult = Apollo.QueryResult<GetHeaderMenuQuery, GetHeaderMenuQueryVariables>;
 export const GetPostsDocument = gql`
-    query getPosts {
-  posts {
+    query getPosts($first: Int, $after: String) {
+  posts(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage
+      endCursor
+      total
+    }
     nodes {
+      id
       title
       categories {
         nodes {
@@ -73554,6 +74089,7 @@ export const GetPostsDocument = gql`
           }
         }
       }
+      date
     }
   }
 }
@@ -73571,6 +74107,8 @@ export const GetPostsDocument = gql`
  * @example
  * const { data, loading, error } = useGetPostsQuery({
  *   variables: {
+ *      first: // value for 'first'
+ *      after: // value for 'after'
  *   },
  * });
  */
@@ -73590,49 +74128,6 @@ export type GetPostsQueryHookResult = ReturnType<typeof useGetPostsQuery>;
 export type GetPostsLazyQueryHookResult = ReturnType<typeof useGetPostsLazyQuery>;
 export type GetPostsSuspenseQueryHookResult = ReturnType<typeof useGetPostsSuspenseQuery>;
 export type GetPostsQueryResult = Apollo.QueryResult<GetPostsQuery, GetPostsQueryVariables>;
-export const GetPostsSlugsDocument = gql`
-    query getPostsSlugs {
-  posts {
-    edges {
-      node {
-        slug
-      }
-    }
-  }
-}
-    `;
-
-/**
- * __useGetPostsSlugsQuery__
- *
- * To run a query within a React component, call `useGetPostsSlugsQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetPostsSlugsQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useGetPostsSlugsQuery({
- *   variables: {
- *   },
- * });
- */
-export function useGetPostsSlugsQuery(baseOptions?: Apollo.QueryHookOptions<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>(GetPostsSlugsDocument, options);
-      }
-export function useGetPostsSlugsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>(GetPostsSlugsDocument, options);
-        }
-export function useGetPostsSlugsSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>(GetPostsSlugsDocument, options);
-        }
-export type GetPostsSlugsQueryHookResult = ReturnType<typeof useGetPostsSlugsQuery>;
-export type GetPostsSlugsLazyQueryHookResult = ReturnType<typeof useGetPostsSlugsLazyQuery>;
-export type GetPostsSlugsSuspenseQueryHookResult = ReturnType<typeof useGetPostsSlugsSuspenseQuery>;
-export type GetPostsSlugsQueryResult = Apollo.QueryResult<GetPostsSlugsQuery, GetPostsSlugsQueryVariables>;
 export const GetPostDocument = gql`
     query getPost($id: ID!) {
   post(id: $id, idType: SLUG) {
@@ -73643,6 +74138,11 @@ export const GetPostDocument = gql`
       node {
         firstName
         lastName
+      }
+    }
+    categories {
+      nodes {
+        name
       }
     }
   }

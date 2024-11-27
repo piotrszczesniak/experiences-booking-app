@@ -26,9 +26,15 @@ export const GET_MENU_BY_NAME = gql`
 `;
 
 export const GET_ALL_POSTS = gql`
-  query getPosts {
-    posts {
+  query getPosts($first: Int, $after: String) {
+    posts(first: $first, after: $after) {
+      pageInfo {
+        hasNextPage
+        endCursor
+        total
+      }
       nodes {
+        id
         title
         categories {
           nodes {
@@ -52,18 +58,7 @@ export const GET_ALL_POSTS = gql`
             }
           }
         }
-      }
-    }
-  }
-`;
-
-export const GET_ALL_POSTS_SLUGS = gql`
-  query getPostsSlugs {
-    posts {
-      edges {
-        node {
-          slug
-        }
+        date
       }
     }
   }
@@ -79,6 +74,11 @@ export const GET_POST = gql`
         node {
           firstName
           lastName
+        }
+      }
+      categories {
+        nodes {
+          name
         }
       }
     }
