@@ -3,6 +3,15 @@ import PaginationControls from '../../../components/PaginationControls';
 
 const POSTS_PER_PAGE = 8;
 
+// Define the Post type
+type Post = {
+  id: number;
+  slug: string;
+  title: {
+    rendered: string;
+  };
+};
+
 const BlogPageNumber = async ({
   params,
 }: {
@@ -12,10 +21,11 @@ const BlogPageNumber = async ({
   const offset = (pageNumber - 1) * POSTS_PER_PAGE; // Calculate offset
 
   try {
+    // Get the base URL from the environment variable
+    const baseUrl = process.env.NEXT_PUBLIC_WORDPRESS_REST_API_URL;
     // Fetch posts and total count in one request using _embed for extra data
-    // TODO: extract url to variable
     const response = await fetch(
-      `https://bumperball.pl/wp-json/wp/v2/posts?offset=${offset}&per_page=${POSTS_PER_PAGE}&_embed`,
+      `${baseUrl}/posts?offset=${offset}&per_page=${POSTS_PER_PAGE}&_embed`,
       { next: { revalidate: 10 } } // Enable ISR revalidation
     );
 
@@ -25,7 +35,10 @@ const BlogPageNumber = async ({
 
     // Parse the JSON response
     const posts = await response.json();
-    const total = parseInt(response.headers.get('X-WP-Total') || '0', 10); // Total number of posts from headers
+    const total: number = parseInt(
+      response.headers.get('X-WP-Total') || '0',
+      10
+    ); // Total number of posts from headers
 
     // Handle the case where no posts are returned
     if (!posts || posts.length === 0) {
@@ -36,7 +49,7 @@ const BlogPageNumber = async ({
       <>
         <ol>
           {/* //TODO: type posts */}
-          {posts.map((post: any) => (
+          {posts.map((post: Post) => (
             <li key={post.id}>
               <Link href={`/blog/${post.slug}`}>{post.title.rendered}</Link>
             </li>
