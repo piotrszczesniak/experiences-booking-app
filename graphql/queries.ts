@@ -64,18 +64,54 @@ export const GET_ALL_POSTS = gql`
   }
 `;
 
+export const GET_PAGE_META_BY_SLUG = `
+query GET_PAGE_BY_SLUG($id: ID!) {
+  page(id: $id, idType: URI) {
+    seo {
+      title
+      metaDesc
+    }
+  }
+} 
+`;
+
+export const GET_POST_META_BY_SLUG = `
+query GET_POST_BY_SLUG($id: ID!) {
+  page(id: $id, idType: URI) {
+    seo {
+      title
+      metaDesc
+    }
+  }
+} 
+`;
+
 export const GET_POST = gql`
   query getPost($id: ID!) {
     post(id: $id, idType: SLUG) {
+      seo {
+        title
+        metaDesc
+        readingTime
+      }
+      isSticky
       title
-      content
       date
       author {
         node {
-          firstName
-          lastName
+          name
+          description
         }
       }
+      featuredImage {
+        node {
+          title
+          altText
+          sourceUrl(size: LARGE)
+          sizes(size: LARGE)
+        }
+      }
+      content(format: RENDERED)
       categories {
         nodes {
           name
