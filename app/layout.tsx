@@ -4,6 +4,7 @@ import './globals.scss';
 
 import Footer from './components/Footer';
 import MainMenu from './components/MainMenu';
+import NextTopLoader from 'nextjs-toploader';
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] });
 
@@ -19,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={robotoSlab.className}>
         <main>
+          <NextTopLoader color="#dd2241" />
           <MainMenu />
           ---
           {children}
