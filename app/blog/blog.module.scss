@@ -1,3 +1,129 @@
+/* Header Section */
+.blogHeader {
+  background: linear-gradient(135deg, #222, #333);
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.headerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.headerContent h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subHeader {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.headerContent h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* "Read what we blog about" Section */
+.readSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: #f7f7f7;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.readText {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.readIcon {
+  font-size: 20px;
+}
+
+/* Main Blog Content Layout */
+.blogContent {
+  display: flex;
+  width: 100%;
+  margin: 2rem 0;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* TripAdvisor Sidebar */
+.tripAdvisorSidebar {
+  width: 300px; /* Wider sidebar */
+  border-right: 1px solid #e0e0e0;
+  padding-right: 20px;
+}
+
+/* Posts Container */
+.postsContainer {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.postCard {
+  /* Two posts per row */
+  flex: 1 1 calc((100% - 20px) / 2);
+  max-width: calc((100% - 20px) / 2);
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.postImageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px; /* More rectangular image */
+}
+
+.postTitle {
+  font-size: 20px;
+  padding: 1rem;
+  margin: 0;
+  color: #333;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.postTitle a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.postTitle a:hover {
+  color: #0070f3;
+}
+
+/* Pagination */
 .pagination {
-  color: red;
+  margin: 2rem auto;
+  text-align: center;
 }
