@@ -1,38 +1,43 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import Script from 'next/script';
 import React, { useState } from 'react';
+import styles from './TripAdvisor.module.scss';
+import './TripAdvisor.scss';
 
 const TripAdvisor = () => {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
-  console.log('isScriptLoaded', isScriptLoaded);
+  const handleScriptLoad = () => {
+    setIsScriptLoaded(true);
+  };
 
   return (
-    <aside>
-      <div id='TA_selfserveprop232' className='TA_selfserveprop'>
-        <ul id='dGSbBIR07fO' className='TA_links ScfyBZ0r'>
-          <li id='lkkEehJUsPbD' className='HLetZ8mmCwf'>
-            <a target='_blank' href='https://www.tripadvisor.co.uk/'>
+    <aside className={styles.aside}>
+      <div id='TA_selfserveprop953' className='TA_selfserveprop'>
+        <div id='hPJATIEsD' className='TA_links WTWm6Ayt'>
+          <div id='stbmlVRC8kl' className='Xmr6b9eZrr7'>
+            <Link
+              target='_blank'
+              href='https://www.tripadvisor.co.uk/Attraction_Review-g274772-d7179577-Reviews-Bubble_Football_More_by_Bumper_Ball_Experiences-Krakow_Lesser_Poland_Province_Sou.html'
+            >
               <Image
                 width={100}
                 height={22}
-                data-lazyload='true'
-                src='https://www.tripadvisor.co.uk/img/cdsi/img2/branding/150_logo-11900-2.png'
+                src='https://www.tripadvisor.co.uk/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-11900-2.svg'
                 alt='TripAdvisor'
               />
-            </a>
-          </li>
-        </ul>
+            </Link>
+          </div>
+        </div>
       </div>
-      <script
-        async
-        data-cfasync='false'
-        src='https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=232&amp;locationId=7179577&amp;lang=en_UK&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2'
+      <Script
+        src='https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=953&amp;locationId=7179577&amp;lang=en_UK&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2'
         data-loadtrk
-        // onLoad='this.loadtrk=true'
-      ></script>
+        onLoad={handleScriptLoad}
+      />
     </aside>
   );
 };

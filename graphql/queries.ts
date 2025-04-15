@@ -94,6 +94,8 @@ export const GET_POST = gql`
         metaDesc
         readingTime
       }
+      databaseId
+      link
       isSticky
       title
       date
@@ -101,6 +103,11 @@ export const GET_POST = gql`
         node {
           name
           description
+          avatar {
+            url
+            width
+            height
+          }
         }
       }
       featuredImage {
@@ -346,6 +353,75 @@ export const GET_PRODUCTS_KRAKOW_SLUGS = gql`
     products(first: 30, where: { category: "krakow" }) {
       nodes {
         slug
+      }
+    }
+  }
+`;
+
+// export const GET_NEXT_POST = gql`
+//   query getPosts($after: String!) {
+//     posts(first: 1, after: $after) {
+//       edges {
+//         node {
+//           id
+//           title
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `;
+
+// export const GET_PREVIOUS_POST = gql`
+//   query getPosts($before: String!) {
+//     posts(first: 1, before: $before) {
+//       edges {
+//         node {
+//           id
+//           title
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `;
+
+export const GET_SINGLE_POST_CURSOR = gql`
+  query getSinglePostCursor($id: Int!) {
+    posts(where: { id: $id }) {
+      pageInfo {
+        hasNextPage
+        endCursor
+        hasPreviousPage
+      }
+      edges {
+        cursor
+        node {
+          databaseId
+        }
+      }
+    }
+  }
+`;
+
+export const GET_ADJACENT_POSTS = gql`
+  query getAdjacentPosts($after: String, $before: String) {
+    nextPosts: posts(first: 1, after: $after) {
+      edges {
+        node {
+          id
+          title
+          slug
+        }
+      }
+    }
+    previousPosts: posts(first: 1, before: $before) {
+      edges {
+        node {
+          id
+          title
+          slug
+        }
       }
     }
   }
