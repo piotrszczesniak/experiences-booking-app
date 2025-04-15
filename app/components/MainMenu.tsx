@@ -23,7 +23,7 @@ const MainMenu = async () => {
   const queryData: GetHeaderMenuQuery = data;
   const menu = queryData.acfSiteSettings?.acfHeaderMenu?.menuItems;
 
-  console.log('menu', queryData);
+  // console.log('menu', queryData);
 
   return (
     <nav className={styles.nav}>

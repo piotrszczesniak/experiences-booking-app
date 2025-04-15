@@ -64,18 +64,61 @@ export const GET_ALL_POSTS = gql`
   }
 `;
 
+export const GET_PAGE_META_BY_SLUG = `
+query GET_PAGE_BY_SLUG($id: ID!) {
+  page(id: $id, idType: URI) {
+    seo {
+      title
+      metaDesc
+    }
+  }
+} 
+`;
+
+export const GET_POST_META_BY_SLUG = `
+query GET_POST_BY_SLUG($id: ID!) {
+  page(id: $id, idType: URI) {
+    seo {
+      title
+      metaDesc
+    }
+  }
+} 
+`;
+
 export const GET_POST = gql`
   query getPost($id: ID!) {
     post(id: $id, idType: SLUG) {
+      seo {
+        title
+        metaDesc
+        readingTime
+      }
+      databaseId
+      link
+      isSticky
       title
-      content
       date
       author {
         node {
-          firstName
-          lastName
+          name
+          description
+          avatar {
+            url
+            width
+            height
+          }
         }
       }
+      featuredImage {
+        node {
+          title
+          altText
+          sourceUrl(size: LARGE)
+          sizes(size: LARGE)
+        }
+      }
+      content(format: RENDERED)
       categories {
         nodes {
           name
@@ -310,6 +353,75 @@ export const GET_PRODUCTS_KRAKOW_SLUGS = gql`
     products(first: 30, where: { category: "krakow" }) {
       nodes {
         slug
+      }
+    }
+  }
+`;
+
+// export const GET_NEXT_POST = gql`
+//   query getPosts($after: String!) {
+//     posts(first: 1, after: $after) {
+//       edges {
+//         node {
+//           id
+//           title
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `;
+
+// export const GET_PREVIOUS_POST = gql`
+//   query getPosts($before: String!) {
+//     posts(first: 1, before: $before) {
+//       edges {
+//         node {
+//           id
+//           title
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `;
+
+export const GET_SINGLE_POST_CURSOR = gql`
+  query getSinglePostCursor($id: Int!) {
+    posts(where: { id: $id }) {
+      pageInfo {
+        hasNextPage
+        endCursor
+        hasPreviousPage
+      }
+      edges {
+        cursor
+        node {
+          databaseId
+        }
+      }
+    }
+  }
+`;
+
+export const GET_ADJACENT_POSTS = gql`
+  query getAdjacentPosts($after: String, $before: String) {
+    nextPosts: posts(first: 1, after: $after) {
+      edges {
+        node {
+          id
+          title
+          slug
+        }
+      }
+    }
+    previousPosts: posts(first: 1, before: $before) {
+      edges {
+        node {
+          id
+          title
+          slug
+        }
       }
     }
   }
