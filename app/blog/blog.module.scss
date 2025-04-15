@@ -1,15 +1,17 @@
+/* blog.module.scss */
+
 /* Header Section */
 .blogHeader {
   background: linear-gradient(135deg, #222, #333);
   padding: 60px 20px;
   text-align: center;
   border-bottom: 1px solid #444;
+  color: #fff;
 }
 
 .headerContent {
-  max-width: 800px;
   margin: 0 auto;
-  color: #fff;
+  max-width: 1200px; // Fluid but limited on very wide screens
 }
 
 .headerContent h1 {
@@ -36,13 +38,13 @@
   align-items: center;
   justify-content: center;
   padding: 20px 0;
-  background-color: #f7f7f7;
+  background: #f7f7f7;
 }
 
 .line {
-  flex-grow: 1;
+  flex: 1;
   height: 1px;
-  background-color: #ccc;
+  background: #ccc;
   margin: 0 10px;
 }
 
@@ -59,18 +61,20 @@
   font-size: 20px;
 }
 
-/* Main Blog Content Layout */
+/* Main Blog Content */
 .blogContent {
   display: flex;
-  width: 100%;
-  margin: 2rem 0;
+  flex-wrap: wrap;
   gap: 20px;
+  margin: 2rem auto;
+  max-width: 1200px;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* TripAdvisor Sidebar */
+/* Sidebar – Reserved for TripAdvisor */
 .tripAdvisorSidebar {
-  width: 300px; /* Wider sidebar */
+  // flex: 0 0 300px;
   border-right: 1px solid #e0e0e0;
   padding-right: 20px;
 }
@@ -78,16 +82,17 @@
 /* Posts Container */
 .postsContainer {
   flex: 1;
+}
+
+/* Posts List & Post Cards */
+.postsList {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
 }
 
 .postCard {
-  /* Two posts per row */
-  flex: 1 1 calc((100% - 20px) / 2);
-  max-width: calc((100% - 20px) / 2);
+  flex: 0 1 calc((100% - 20px) / 2);
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
@@ -100,15 +105,15 @@
 .postImageContainer {
   position: relative;
   width: 100%;
-  height: 250px; /* More rectangular image */
+  height: 250px;
 }
 
+/* Post Title */
 .postTitle {
   font-size: 20px;
   padding: 1rem;
   margin: 0;
   color: #333;
-  text-align: center;
   border-top: 1px solid #e0e0e0;
 }
 
@@ -124,6 +129,8 @@
 
 /* Pagination */
 .pagination {
-  margin: 2rem auto;
+  width: 100%;
+  margin-top: 20px;
   text-align: center;
+  clear: both;
 }
