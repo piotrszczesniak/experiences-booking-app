@@ -10,34 +10,22 @@ interface BlogPostsProps {
   currentPage: number;
 }
 
-export default function BlogPosts({
-  posts,
-  pageInfo,
-  currentPage,
-}: BlogPostsProps) {
+export default function BlogPosts({ posts, pageInfo, currentPage }: BlogPostsProps) {
   return (
     <>
       <div className={styles.postsList}>
         {posts.map((item) => {
           if (!item.title) return null;
-          const titleText =
-            typeof item.title === 'object' ? item.title.rendered : item.title;
+          const titleText = typeof item.title === 'object' ? item.title.rendered : item.title;
+          // TODO: do not use type any @lukasczerota
           const imageUrl: string =
-            item.featuredImage?.node?.mediaItemUrl ||
-            (item as any)._embedded?.['wp:featuredmedia']?.[0]?.source_url ||
-            '';
+            item.featuredImage?.node?.mediaItemUrl || (item as any)._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
 
           return (
             <div key={item.id} className={styles.postCard}>
               {imageUrl && (
                 <div className={styles.postImageContainer}>
-                  <Image
-                    src={imageUrl}
-                    alt={titleText}
-                    layout="fill"
-                    objectFit="cover"
-                    quality={75}
-                  />
+                  <Image src={imageUrl} alt={titleText} layout='fill' objectFit='cover' quality={75} />
                 </div>
               )}
               <h3 className={styles.postTitle}>
@@ -48,11 +36,7 @@ export default function BlogPosts({
         })}
       </div>
       <div className={styles.pagination}>
-        <PaginationControls
-          hasNextPage={pageInfo?.hasNextPage}
-          currentPage={currentPage}
-          total={pageInfo?.total}
-        />
+        <PaginationControls hasNextPage={pageInfo?.hasNextPage} currentPage={currentPage} total={pageInfo?.total} />
       </div>
     </>
   );
