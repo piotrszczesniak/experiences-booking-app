@@ -1,11 +1,11 @@
 // /app/blog/page/[pageNumber]/page.tsx
-import type { Post } from '@/generated/graphql';
+import { PostsD } from '@/types/posts';
 import BlogPosts from '@/app/components/BlogPosts';
 import { notFound } from 'next/navigation';
 
-interface PageProps {
+type PageProps = {
   params: { pageNumber: string };
-}
+};
 
 export default async function BlogPaginatedPage({ params }: PageProps) {
   const currentPage = parseInt(params.pageNumber, 10);
@@ -22,15 +22,13 @@ export default async function BlogPaginatedPage({ params }: PageProps) {
     }&per_page=${POSTS_PER_PAGE}&_embed`,
     { next: { revalidate: 10 } }
   );
-
   if (!response.ok) {
     throw new Error(`Failed to fetch posts: ${response.statusText}`);
   }
 
   // Parse the JSON response.
-  const posts = await response.json();
+  const posts: PostsD[] = await response.json();
   const total: number = parseInt(response.headers.get('X-WP-Total') || '0', 10);
-
   // Ensure that posts is a valid array.
   if (!posts || !Array.isArray(posts) || posts.length === 0) {
     notFound();
