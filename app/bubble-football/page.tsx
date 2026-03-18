@@ -1,5 +1,3 @@
-import Buttons from '../components/Buttons';
-
 const BubbleHome = async () => {
   return (
     <main>
