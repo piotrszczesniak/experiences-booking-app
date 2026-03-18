@@ -7,7 +7,6 @@ const config: CodegenConfig = {
   generates: {
     'generated/': {
       preset: 'client',
-      plugins: ['typescript', 'typescript-operations', 'typescript-react-apollo'],
       config: {
         withHooks: true,
         skipTypename: false,

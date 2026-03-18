@@ -1,14 +1,26 @@
 import { GetPostQuery } from '@/generated/graphql';
-import { GET_ADJACENT_POSTS, GET_POST, GET_SINGLE_POST_CURSOR } from '@/graphql/queries';
+import { GET_ADJACENT_POSTS, GET_ALL_POSTS, GET_POST, GET_SINGLE_POST_CURSOR } from '@/graphql/queries';
 import { getClient } from '@/lib/apollo-client';
 import Image from 'next/image';
 import styles from './post.module.scss';
 import '@/app/globals.scss';
 
 import ShareButtons from '../blogComponents/ShareButtons';
-import { getDaySuffix } from '@/utilis/getDaySuffix';
+import { formatDate } from '@/utilis/formatDate';
 import Link from 'next/link';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
+export async function generateStaticParams() {
+  const client = getClient();
+  const { data } = await client.query({
+    query: GET_ALL_POSTS,
+    variables: { first: 100 },
+  });
+  const posts: Array<{ slug?: string | null }> = data?.posts?.nodes ?? [];
+  return posts
+    .filter((post) => post.slug)
+    .map((post) => ({ slug: post.slug as string }));
+}
 
 const SinglePost = async ({ params }: { params: { slug: string } }) => {
   const client = getClient();
@@ -28,7 +40,6 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
 
   const queryInitialData: GetPostQuery = initialData;
   const post = queryInitialData.post;
-  console.log(post?.categories?.nodes.map((category) => category.name));
 
   const postDate = new Date(post?.date || '');
   const formattedDate = formatDate(postDate);
@@ -62,22 +73,6 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
 
   const nextPost = nextPostData.nextPosts?.edges[0]?.node;
   const previousPost = nextPostData.previousPosts?.edges[0]?.node;
-  console.log('nextPost', nextPost);
-  console.log('previousPost', previousPost);
-
-  /**
-   * TODO:
-   * - query for a curosor for this post
-   * - query for the next and previous post
-   */
-
-  // TODO: move to a separate file
-  function formatDate(date: Date): string {
-    const day = date.getDate();
-    const month = date.toLocaleString('default', { month: 'long' });
-    const year = date.getFullYear();
-    return `${day}${getDaySuffix(day)} ${month} ${year}`;
-  }
 
   return (
     <article className={styles.article}>
@@ -99,11 +94,14 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
         />
         <div className={styles.headline}>
           <div className={styles.categories}>
-            {post?.categories?.nodes.map((category, index) => (
-              <a className={styles.category} href='#' key={index}>
-                {category.name}
-              </a>
-            ))}
+            {post?.categories?.nodes.map((category, index) => {
+              const slug = (category as { name?: string | null; slug?: string | null }).slug || '';
+              return (
+                <Link className={styles.category} href={`/blog/category/${slug}`} key={index}>
+                  {category.name}
+                </Link>
+              );
+            })}
           </div>
 
           <h1 className={styles.title}>{post?.title}</h1>
@@ -117,11 +115,14 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
       <ShareButtons cta={'Share this post and inspire others to travel!'} title={post?.title || ''} url={post?.link || ''} />
       <footer className={styles.metadata}>
         This entry was posted in{' '}
-        {post?.categories?.nodes.map((category, index) => (
-          <a className={styles.category} href='#' key={index}>
-            {category.name}
-          </a>
-        ))}
+        {post?.categories?.nodes.map((category, index) => {
+          const slug = (category as { name?: string | null; slug?: string | null }).slug || '';
+          return (
+            <Link className={styles.category} href={`/blog/category/${slug}`} key={index}>
+              {category.name}
+            </Link>
+          );
+        })}
       </footer>
       <div className={styles.author}>
         <div className={styles.image}>
@@ -136,15 +137,13 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
         {previousPost && (
           <div className={styles.previous}>
             <FaChevronLeft />
-
-            <a href={`/blog/${previousPost?.slug}`}>{previousPost?.title}</a>
+            <Link href={`/blog/${previousPost?.slug}`}>{previousPost?.title}</Link>
           </div>
         )}
 
         {nextPost && (
           <div className={styles.next}>
             <Link href={`/blog/${nextPost?.slug}`}>{nextPost?.title}</Link>
-
             <FaChevronRight />
           </div>
         )}

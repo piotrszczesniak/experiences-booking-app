@@ -122,6 +122,7 @@ export const GET_POST = gql`
       categories {
         nodes {
           name
+          slug
         }
       }
     }

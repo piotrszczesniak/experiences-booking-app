@@ -22,14 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoSlab.className}>
-        <main>
-          <NextTopLoader color="#dd2241" />
-          <MainMenu />
-          ---
-          {children}
-          ---
-          <Footer />
-        </main>
+        <NextTopLoader color="#dd2241" />
+        <MainMenu />
+        {children}
+        <Footer />
       </body>
     </html>
   );
